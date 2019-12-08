@@ -206,27 +206,6 @@ def update_lights(matrix, mean, std):
     """
     global decay
 
-    # adjustment_array = np.array([1,1,1,1,1,1,1,1.05], dtype='float32')
-    # #print(max(matrix))
-    # #print('mean' + str(np.mean(matrix)))
-    # #print matrix
-	# #adj_matrix = np.identity(8, dtype='float32')
-    # #adj_matrix[5,5] = 1.5
-    # #print mean
-    # #print transpose(mean) .* adj_matrix
-    # brightness = matrix - np.multiply(mean, adjustment_array) + (std * cm.lightshow.SD_low)
-    # #brightness[6] = np.min(brightness)
-    #
-    # brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * (1.0 - (cm.lightshow.attenuate_pct / 100.0))
-    # #brightness[6] = 1 if np.mean(matrix) > 13.2 and np.max(matrix) > 14.1 else 0
-    # #Make spotlight be third lowest value
-    # #brightness[6] = np.partition(brightness, 3)[3]
-    # #brightness[6] = 1 if np.mean(matrix) > 13.2 and np.max(matrix) > 14.1 else 0
-    # #brightness[6] = 1 if np.partition(matrix, 6)[6] > 14.1 else 0
-    # #brightness[6] = 1 if np.max(matrix) > 14.25 else 0
-    # #brightness[6] = 1 if np.max(matrix - mean - std *2) > 0 else 0
-    # ## HAVE SIX GO OFF WHEN STD EXCEEDED
-
     brightness = matrix - mean + (std * cm.lightshow.SD_low)
     brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * (1.0 - (cm.lightshow.attenuate_pct / 100.0))
 
@@ -346,7 +325,6 @@ def audio_in():
 
     # Start with these as our initial guesses - will calculate a rolling mean / std 
     # as we get input data.
-
     mean = np.array([12.0 for _ in range(hc.GPIOLEN)], dtype='float32')
     std = np.array([1.5 for _ in range(hc.GPIOLEN)], dtype='float32')
     count = 2
@@ -387,7 +365,7 @@ def audio_in():
             # if the maximum of the absolute value of all samples in
             # data is below a threshold we will disregard it
             audio_max = audioop.max(data, 2)
-            if audio_max < 270:
+            if audio_max < 250:
                 # we will fill the matrix with zeros and turn the lights off
                 matrix = np.zeros(hc.GPIOLEN, dtype="float32")
                 log.debug("below threshold: '" + str(audio_max) + "', turning the lights off")
@@ -481,6 +459,13 @@ def load_custom_config(config_filename):
 
                 if config.has_option(lsc, "SD_high"):
                     cm.lightshow.SD_high = config.getfloat(lsc, "SD_high")
+
+                if config.has_option(lsc, "SD_low2"):
+                    cm.lightshow.SD_low = config.getfloat(lsc, "SD_low")
+
+                if config.has_option(lsc, "SD_high2"):
+                    cm.lightshow.SD_high = config.getfloat(lsc, "SD_high")
+
 
                 # setup up custom preshow
                 has_preshow_configuration = config.has_option(lsc, 'preshow_configuration')
@@ -649,7 +634,7 @@ def setup_cache(cache_filename, fft_calc):
             msg = "Cached sync data song_filename not found: '"
             log.warn(msg + cache_filename + "'.  One will be generated.")
 
-        return cache_found, cache_matrix, std, mean
+    return cache_found, cache_matrix, std, mean
 
 
 def save_cache(cache_matrix, cache_filename, fft_calc):
