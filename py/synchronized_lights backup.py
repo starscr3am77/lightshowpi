@@ -206,11 +206,11 @@ def update_lights(matrix, mean, std):
     """
     global decay
 
-    brightness = matrix - mean + (std * cm.lightshow.SD_low)
+    brightness = matrix - mean + (std * cm.lightshow.SD_low) # MATRIX WILL BE hc.freq_bins long
     brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * (1.0 - (cm.lightshow.attenuate_pct / 100.0))
 
     # insure that the brightness levels are in the correct range
-    brightness = np.clip(brightness, 0.0, 1.0)
+    brightness = np.clip(brightness, 0.0, 1.0) # brightness needs to be hc.GPIOLEN long
     brightness = np.round(brightness, decimals=3)
 
     # calculate light decay rate if used
@@ -367,7 +367,7 @@ def audio_in():
             audio_max = audioop.max(data, 2)
             if audio_max < 250:
                 # we will fill the matrix with zeros and turn the lights off
-                matrix = np.zeros(hc.GPIOLEN, dtype="float32")
+                matrix = np.zeros(hc.FREQ_BINS, dtype="float32")
                 log.debug("below threshold: '" + str(audio_max) + "', turning the lights off")
             else:
                 matrix = fft_calc.calculate_levels(data)
@@ -560,7 +560,7 @@ def setup_audio(song_filename):
 
     fft_calc = fft.FFT(CHUNK_SIZE,
                        sample_rate,
-                       hc.GPIOLEN,
+                       hc.FREQ_BINS,
                        cm.audio_processing.min_frequency,
                        cm.audio_processing.max_frequency,
                        cm.audio_processing.custom_channel_mapping,
@@ -596,14 +596,14 @@ def setup_cache(cache_filename, fft_calc):
     :raise IOError:
     """
     # create empty array for the cache_matrix
-    cache_matrix = np.empty(shape=[0, hc.GPIOLEN])
+    cache_matrix = np.empty(shape=[0, hc.FREQ_BINS])
     cache_found = False
 
     # The values 12 and 1.5 are good estimates for first time playing back
     # (i.e. before we have the actual mean and standard deviations
     # calculated for each channel).
-    mean = np.array([12.0 for _ in range(hc.GPIOLEN)], dtype='float32')
-    std = np.array([1.5 for _ in range(hc.GPIOLEN)], dtype='float32')
+    mean = np.array([12.0 for _ in range(hc.FREQ_BINS)], dtype='float32')
+    std = np.array([1.5 for _ in range(hc.FREQ_BINS)], dtype='float32')
 
     if args.readcache:
         # Read in cached fft
@@ -615,7 +615,7 @@ def setup_cache(cache_filename, fft_calc):
             cache_found = fft_calc.compare_config(cache_filename)
             if not cache_found:
                 # create empty array for the cache_matrix
-                cache_matrix = np.empty(shape=[0, hc.GPIOLEN])
+                cache_matrix = np.empty(shape=[0, hc.FREQ_BINS])
                 raise IOError()
 
             # get std from matrix / located at index 0
@@ -651,10 +651,10 @@ def save_cache(cache_matrix, cache_filename, fft_calc):
     :type fft_calc: fft.FFT
     """
     # Compute the standard deviation and mean values for the cache
-    mean = np.empty(hc.GPIOLEN, dtype='float32')
-    std = np.empty(hc.GPIOLEN, dtype='float32')
+    mean = np.empty(hc.FREQ_BINS, dtype='float32')
+    std = np.empty(hc.FREQ_BINS, dtype='float32')
 
-    for i in range(0, hc.GPIOLEN):
+    for i in range(0, hc.FREQ_BINS):
         std[i] = np.std([item for item in cache_matrix[:, i] if item > 0])
         mean[i] = np.mean([item for item in cache_matrix[:, i] if item > 0])
 

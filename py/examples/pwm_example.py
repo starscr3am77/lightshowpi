@@ -34,7 +34,7 @@ def main(exit_event):
         # here we just loop over the gpio pins and turn them on and off
         # with the pwm feature of lightshowpi
         for light in range(int(len(lights) / 2)):
-            if hc.is_pin_pwm[lights[light]] and hc.is_pin_pwm[lights2[light]]:
+            if hc.is_pin_pwm(lights[light]) and hc.is_pin_pwm(lights2[light]):
                 for brightness in range(0, pwm_max):
                     # fade in
                     hc.turn_on_light(lights[light], 0, brightness=float(brightness)/pwm_max)
@@ -48,7 +48,7 @@ def main(exit_event):
                     time.sleep(.1 / pwm_max)
 
         for light in range(int(len(lights) / 2)-1, -1, -1):
-            if hc.is_pin_pwm[lights[light]] and hc.is_pin_pwm[lights2[light]]:
+            if hc.is_pin_pwm(lights[light]) and hc.is_pin_pwm(lights2[light]):
                 for brightness in range(0, pwm_max):
                     # fade in
                     hc.turn_on_light(lights[light], brightness=float(brightness)/pwm_max)

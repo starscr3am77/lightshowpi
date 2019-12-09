@@ -76,13 +76,24 @@ inverted_channels = cm.lightshow.invert_channels
 _GPIOASINPUT = 0
 _GPIOASOUTPUT = 1
 GPIOLEN = cm.hardware.gpio_len
+FREQ_BINS = cm.lightshow.freq_bins
 
-is_pin_pwm = list()
-for mode in range(len(cm.hardware.pin_modes)):
-    if cm.hardware.pin_modes[mode] == "pwm":
-        is_pin_pwm.append(True)
-    else:
-        is_pin_pwm.append(False)
+
+# OLD METHOD
+# is_pin_pwm2 = list()
+# for mode in range(len(cm.hardware.pin_modes)):
+#     if cm.hardware.pin_modes[mode] == "pwm":
+#         is_pin_pwm2.append(True)
+#     else:
+#         is_pin_pwm2.append(False)
+
+# ALLOWS DYNAMIC SWAPPING OF GPIOS
+def is_pin_pwm(gpio_idx):
+    m = cm.is_pin_pwm(gpio_idx)
+    #assert m == is_pin_pwm2[gpio_idx]
+    #print(cm.hardware.gpio_pins)
+    return m
+
 
 # Check ActiveLowMode Configuration Setting
 if _ACTIVE_LOW_MODE:
@@ -196,7 +207,7 @@ def set_pin_as_output(pin):
     :param pin: index of pin in cm.hardware.gpio_pins
     :type pin: int
     """
-    if is_pin_pwm[pin]:
+    if is_pin_pwm(pin):
         wiringpi.softPwmCreate(cm.hardware.gpio_pins[pin], 0, _PWM_MAX)
     else:
         wiringpi.pinMode(cm.hardware.gpio_pins[pin], _GPIOASOUTPUT)
@@ -313,7 +324,7 @@ def set_light(pin, use_overrides=False, brightness=1.0):
     if not network.playing and server:
         network.broadcast(cm.hardware.gpio_pins.index(cm.hardware.gpio_pins[pin]), brightness)
 
-    if is_pin_pwm[pin]:
+    if is_pin_pwm(pin):
         wiringpi.softPwmWrite(cm.hardware.gpio_pins[pin], int(brightness * _PWM_MAX))
     else:
         wiringpi.digitalWrite(cm.hardware.gpio_pins[pin], int(brightness > 0.5))
@@ -355,7 +366,7 @@ def light_on(pins, override=False, brightness=1.0):
         return
 
     for pin in pins:
-        if not is_pin_pwm[pin]:
+        if not is_pin_pwm(pin):
             brightness = 1
 
         set_light(pin, use_overrides=override, brightness=brightness)
@@ -396,7 +407,7 @@ def fade(from_test=False):
 
             print
 
-            if is_pin_pwm[light]:
+            if is_pin_pwm(light):
                 for _ in range(flashes):
                     for brightness in range(0, _PWM_MAX + 1):
                         # fade in
@@ -576,7 +587,7 @@ def dance():
         # here we just loop over the gpio pins and turn them on and off
         # with the pwm feature of lightshowpi
         for light in range(int(len(lights) / 2)):
-            if is_pin_pwm[light]:
+            if is_pin_pwm(light):
                 for brightness in range(0, pwm_max):
                     # fade in
                     light_on(lights[light], 0, brightness=float(brightness) / pwm_max)
@@ -596,7 +607,7 @@ def dance():
                 light_off(lights2[light], 0)
 
         for light in range(int(len(lights) / 2) - 1, -1, -1):
-            if is_pin_pwm[light]:
+            if is_pin_pwm(light):
                 for brightness in range(0, pwm_max):
                     # fade in
                     light_on(lights[light], brightness=float(brightness) / pwm_max)
@@ -631,7 +642,7 @@ def step():
             print "channel %s " % light
             for brightness in range(_PWM_MAX - 1, -1, -1):
                 # fade out
-                if is_pin_pwm[light]:
+                if is_pin_pwm(light):
                     light_on(light, False, float(brightness) / _PWM_MAX)
                 else:
                     light_off(light, False, 0)

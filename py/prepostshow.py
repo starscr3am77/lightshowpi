@@ -59,6 +59,9 @@ class PrePostShow(object):
             self.hc.initialize()
 
         self.config = self.hc.cm.lightshow.get(show)
+
+        # SHUFFLE THE CHANNELS!
+        # self.hc.cm.shuffle_pins()
         self.show = show
         self.audio = None
 

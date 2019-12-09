@@ -36401,3 +36401,17 @@ error: [Errno 104] Connection reset by peer
 192.168.187.2 - - [08/Dec/2019 16:03:12] "GET / HTTP/1.1" 200 -
 192.168.187.2 - - [08/Dec/2019 16:03:12] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.187.2 - - [08/Dec/2019 16:03:14] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:11:30] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:11:32] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:11:53] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:12:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:12:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+192.168.187.2 - - [08/Dec/2019 20:12:17] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [08/Dec/2019 20:13:05] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [08/Dec/2019 20:17:41] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [08/Dec/2019 20:17:43] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 09:00:27] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 09:00:28] "GET /css/style.css HTTP/1.1" 200 -

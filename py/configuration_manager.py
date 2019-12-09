@@ -25,6 +25,7 @@ import warnings
 import json
 import shlex
 from collections import defaultdict
+import random
 
 # The home directory and configuration directory for the application.
 HOME_DIR = os.getenv("SYNCHRONIZED_LIGHTS_HOME")
@@ -176,21 +177,31 @@ class Configuration(object):
                 for k, v in settings[count].iteritems():
                     settings[count][k] = v if not isinstance(v, str) else int(v, 16)
 
-        hrdwr["gpio_pins"] = map(int, self.config.get('hardware', 'gpio_pins').split(","))
+        hrdwr["gpio_pins"] = map(int, self.config.get('hardware', 'gpio_pins').split(",")) # just the list as it appears in the config
         self.gpio_len = len(hrdwr["gpio_pins"])
 
         hrdwr["gpio_len"] = len(hrdwr["gpio_pins"])
-
         temp = self.config.get('hardware', 'pin_modes').split(",")
+
         if len(temp) != 1:
             hrdwr["pin_modes"] = temp
         else:
-            hrdwr["pin_modes"] = [temp[0] for _ in range(self.gpio_len)]
+            hrdwr["pin_modes"] = [temp] * self.gpio_len
 
+        # Map actual pin numbers to modes
+        hrdwr["real_gpio_to_mode"] = dict(zip(hrdwr["gpio_pins"], hrdwr["pin_modes"]))
         hrdwr["pwm_range"] = int(self.config.get('hardware', 'pwm_range'))
         hrdwr["active_low_mode"] = self.config.getboolean('hardware', 'active_low_mode')
-
+        #hrdwr["idx_to_pin"] =
         self.hardware = Section(hrdwr)
+
+    def is_pin_pwm(self, gpio_idx):
+        # we can shuffle hrdwr["gpio_pins"] around; when we check if is_pin_pwm, use idx -> wire -> thing
+        # GPIO_TO_MODE[IDX_TO_GPIO[IDX]]
+        return self.hardware.real_gpio_to_mode[self.hardware.gpio_pins[gpio_idx]] == "pwm"
+
+    def shuffle_pins(self):
+        random.shuffle(self.hardware.gpio_pins)
 
     def set_network(self):
         """
@@ -233,7 +244,8 @@ class Configuration(object):
         lghtshw["fifo"] = "/tmp/audio"
         lghtshw["audio_in_card"] = self.config.get(ls, 'audio_in_card')
         lghtshw["audio_out_card"] = self.config.get(ls, 'audio_out_card')
-        
+        lghtshw["freq_bins"] = int(self.config.get(ls, 'freq_bins'))
+
         if lghtshw["use_fifo"]:
             lghtshw["audio_out_card"] = ""
             
@@ -300,6 +312,8 @@ class Configuration(object):
         # Standard Deviation
         lghtshw["SD_low"] = self.config.getfloat(ls, 'SD_low')
         lghtshw["SD_high"] = self.config.getfloat(ls, 'SD_high')
+        lghtshw["SD_low2"] = self.config.getfloat(ls, 'SD_low2')
+        lghtshw["SD_high2"] = self.config.getfloat(ls, 'SD_high2')
 
         self.lightshow = Section(lghtshw)
 
@@ -614,6 +628,10 @@ if __name__ == "__main__":
     print "\nAudio Processing Configuration"
     for akey, avalue in cm.audio_processing.config.iteritems():
         print akey, "=", avalue
+
+    print "\nNetwork Configuration"
+    for nkey, nvalue in cm.network.config.iteritems():
+        print nkey, "=", nvalue
 
     print "\nSMS Configuration"
     for skey, svalue in sms_cm.sms.config.iteritems():

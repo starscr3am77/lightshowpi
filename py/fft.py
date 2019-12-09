@@ -84,13 +84,25 @@ class FFT(object):
         self.audio_levels = AudioLevels(math.log(chunk_size / 2, 2), num_bins)
 
         fl = array(self.frequency_limits)
+
+        # [[20.             45.62291182]
+        #  [45.62291182    104.07250417]
+        # [104.07250417    237.40453404]
+        # [237.40453404    541.55430616]
+        # [541.55430616    1235.3642179]
+        # [1235.3642179    2818.0456392]
+        # [2818.0456392    6428.37238566]
+        # [6428.37238566  14664.05332617]]
+
         self.piff = ((fl * self.chunk_size) / self.sample_rate).astype(int)
 
         for a in range(len(self.piff)):
             if self.piff[a][0] == self.piff[a][1]:
                 self.piff[a][1] += 1
-        self.piff = self.piff.tolist()
-        
+        self.piff = self.piff.tolist() # list of the frequencies
+        # [[0, 1], [1, 4], [4, 10], [10, 23], [23, 52], [52, 120], [120, 274], [274, 625]]
+
+
     def calculate_levels(self, data):
         """Calculate frequency response for each channel defined in frequency_limits
 

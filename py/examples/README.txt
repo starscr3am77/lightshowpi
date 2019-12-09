@@ -145,9 +145,9 @@ turn_off_lights()
     the oppisite of turn_off_lights()
     turn_off_lights(usealwaysonoff=0)
     
-is_pin_pwm[pin]
+is_pin_pwm(pin)
     check if a pin is in pwm mode.
-    NOTE: this is not a function, it is a list make sure you use [] and not ()
+    NOTE: this is NOW a function
 
 There are a few other functions in hardware_controller but there is no need for
 them to be used here.  

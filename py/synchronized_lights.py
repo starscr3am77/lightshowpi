@@ -137,6 +137,8 @@ import hardware_controller as hc
 
 # get copy of configuration manager
 cm = hc.cm
+cm.shuffle_pins()
+log.debug(cm.hardware.gpio_pins)
 
 parser.set_defaults(playlist=cm.lightshow.playlist_path)
 args = parser.parse_args()
@@ -148,7 +150,7 @@ network = hc.network
 server = network.networking == 'server'
 client = network.networking == "client"
 
-terminal = bright_curses.BrightCurses(cm.terminal)
+terminal = False
 
 if cm.lightshow.use_fifo:
     if os.path.exists(cm.lightshow.fifo):
@@ -177,7 +179,7 @@ def end_early():
     if cm.lightshow.mode == 'stream-in':
         try:
             streaming.stdin.write("q")
-        except:
+        except NameError:
             pass
         os.kill(streaming.pid, signal.SIGINT)
         os.unlink(cm.lightshow.fifo)
@@ -206,30 +208,16 @@ def update_lights(matrix, mean, std):
     """
     global decay
 
-    # adjustment_array = np.array([1,1,1,1,1,1,1,1.05], dtype='float32')
-    # #print(max(matrix))
-    # #print('mean' + str(np.mean(matrix)))
-    # #print matrix
-	# #adj_matrix = np.identity(8, dtype='float32')
-    # #adj_matrix[5,5] = 1.5
-    # #print mean
-    # #print transpose(mean) .* adj_matrix
-    # brightness = matrix - np.multiply(mean, adjustment_array) + (std * cm.lightshow.SD_low)
-    # #brightness[6] = np.min(brightness)
-    #
-    # brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * (1.0 - (cm.lightshow.attenuate_pct / 100.0))
-    # #brightness[6] = 1 if np.mean(matrix) > 13.2 and np.max(matrix) > 14.1 else 0
-    # #Make spotlight be third lowest value
-    # #brightness[6] = np.partition(brightness, 3)[3]
-    # #brightness[6] = 1 if np.mean(matrix) > 13.2 and np.max(matrix) > 14.1 else 0
-    # #brightness[6] = 1 if np.partition(matrix, 6)[6] > 14.1 else 0
-    # #brightness[6] = 1 if np.max(matrix) > 14.25 else 0
-    # #brightness[6] = 1 if np.max(matrix - mean - std *2) > 0 else 0
-    # ## HAVE SIX GO OFF WHEN STD EXCEEDED
-
     brightness = matrix - mean + (std * cm.lightshow.SD_low)
-    brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * (1.0 - (cm.lightshow.attenuate_pct / 100.0))
+    brightness = (brightness / (std * (cm.lightshow.SD_low + cm.lightshow.SD_high))) * \
+                 (1.0 - (cm.lightshow.attenuate_pct / 100.0))
 
+    # FEWER FREQUENCIES
+    if hc.FREQ_BINS == hc.GPIOLEN/2:
+        brightness2 = matrix - mean + (std * cm.lightshow.SD_low2)
+        brightness2 = (brightness / (std * (cm.lightshow.SD_low2 + cm.lightshow.SD_high2))) * \
+                     (1.0 - (cm.lightshow.attenuate_pct / 100.0))
+        brightness = np.append(brightness, brightness2)
     # insure that the brightness levels are in the correct range
     brightness = np.clip(brightness, 0.0, 1.0)
     brightness = np.round(brightness, decimals=3)
@@ -244,7 +232,7 @@ def update_lights(matrix, mean, std):
     if server:
         network.broadcast(brightness)
 
-    if terminal.config.enabled:
+    if terminal:
         terminal.curses_render(brightness)
     else:
         for blevel, pin in zip(brightness, range(hc.GPIOLEN)):
@@ -252,6 +240,14 @@ def update_lights(matrix, mean, std):
 
 
 def set_audio_device(sample_rate, num_channels):
+    """Setup the audio devices for output
+
+    :param sample_rate: audio sample rate
+    :type sample_rate: int
+
+    :param num_channels: number of audio channels
+    :type num_channels: int
+    """
     global fm_process
     pi_version = Platform.pi_version()
 
@@ -276,7 +272,6 @@ def set_audio_device(sample_rate, num_channels):
                           "2" if num_channels > 1 else "1"]
 
         log.info("Sending output as fm transmission")
-
 
         with open(os.devnull, "w") as dev_null:
             fm_process = subprocess.Popen(fm_command, stdin=subprocess.PIPE, stdout=dev_null)
@@ -347,11 +342,11 @@ def audio_in():
     # Start with these as our initial guesses - will calculate a rolling mean / std 
     # as we get input data.
 
-    mean = np.array([12.0 for _ in range(hc.GPIOLEN)], dtype='float32')
-    std = np.array([1.5 for _ in range(hc.GPIOLEN)], dtype='float32')
+    mean = np.array([12.0 for _ in range(hc.FREQ_BINS)], dtype='float32')
+    std = np.array([1.5 for _ in range(hc.FREQ_BINS)], dtype='float32')
     count = 2
 
-    running_stats = RunningStats.Stats(hc.GPIOLEN)
+    running_stats = RunningStats.Stats(hc.FREQ_BINS)
 
     # preload running_stats to avoid errors, and give us a show that looks
     # good right from the start
@@ -360,7 +355,7 @@ def audio_in():
     hc.initialize()
     fft_calc = fft.FFT(CHUNK_SIZE,
                        sample_rate,
-                       hc.GPIOLEN,
+                       hc.FREQ_BINS, # number of bins
                        cm.audio_processing.min_frequency,
                        cm.audio_processing.max_frequency,
                        cm.audio_processing.custom_channel_mapping,
@@ -695,6 +690,7 @@ def get_song():
     :return: tuple containing 3 strings: song_filename, config_filename, cache_filename
     :rtype: tuple
     """
+
     play_now = int(cm.get_state('play_now', "0"))
     song_to_play = int(cm.get_state('song_to_play', "0"))
     song_filename = args.file
@@ -918,6 +914,10 @@ def network_client():
 
 
 def launch_curses(screen):
+    """Initiate the curses window
+
+    :param screen: window object representing the entire screen
+    """
     terminal.init(screen)
     main()
 
@@ -937,8 +937,9 @@ if __name__ == "__main__":
         print "One of --playlist or --file must be specified"
         sys.exit()
 
-    if terminal.config.enabled:
+    if cm.terminal.enabled:
         try:
+            terminal = bright_curses.BrightCurses(cm.terminal)
             curses.wrapper(launch_curses)
         except KeyboardInterrupt:
             print "Got KeyboardInterrupt exception. Exiting..."

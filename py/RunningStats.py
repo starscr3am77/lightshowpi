@@ -161,7 +161,7 @@ class Stats(StatsOriginal):
             self.old_var = self.new_var
             self.sample_count = sample_count
 
-        print("Preloading", self.new_mean, self.new_var, sample_count)
+        #print("Preloading", self.new_mean, self.new_var, sample_count)
 
     def push(self, data):
         """Add a new sample to the running standard deviation and mean

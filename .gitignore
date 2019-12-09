@@ -12,6 +12,9 @@ install.log
 # Ignore Other Dev Files
 sftp-config.json
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 # Ignore Dolphin View settings files
 .directory

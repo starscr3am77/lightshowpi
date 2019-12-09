@@ -213,7 +213,7 @@ class Gui(Canvas):
             if pin + 1 in hc.inverted_channels:
                 brightness = 1 - brightness
 
-        if hc.is_pin_pwm[pin]:
+        if hc.is_pin_pwm(pin):
             brightness = int(brightness * self.pwm_max)
             if self.gpioactive:
                 brightness = 100 - brightness
