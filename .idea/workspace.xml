@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2e05307-dc62-48ad-8f32-98ffc87fc07e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/synchronized_lights.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/synchronized_lights.py" afterDir="false" />
-    </list>
+    <list default="true" id="e2e05307-dc62-48ad-8f32-98ffc87fc07e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575734861116</updated>
       <workItem from="1575734880065" duration="1327000" />
-      <workItem from="1576048254716" duration="1376000" />
+      <workItem from="1576048254716" duration="1642000" />
     </task>
     <servers />
   </component>

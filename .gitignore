@@ -9,6 +9,11 @@ install.log
 # Ignore all compiled python files
 *.pyc
 
+# ignore pycharm
+.idea
+*.xml
+
+
 # Ignore Other Dev Files
 sftp-config.json
 
