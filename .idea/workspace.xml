@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2e05307-dc62-48ad-8f32-98ffc87fc07e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/environment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lightshowpi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lightshowpi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/microweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/microweb.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/RunningStats.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/RunningStats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/configuration_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/configuration_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/synchronized_lights.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/synchronized_lights.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lightshow3" />
+    <property name="last_opened_file_path" value="/media/taylor/Data/Linux/Github/lightshowpi" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -94,10 +88,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575949313770">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576048249059">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1575949313770" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576048249059" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1576047354943">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

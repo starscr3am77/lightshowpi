@@ -54,7 +54,7 @@ alsaaudio: for audio input/output
     http://pyalsaaudio.sourceforge.net/
 
 decoder.py: decoding mp3, ogg, wma, ... 
-    https://pypi.python.org/pypi/decoder.py/1.5XB
+    https://pypi.python.org/pypi/decoder.py/1.5X.B
 
 numpy: for FFT calculation
     http://www.numpy.org/
