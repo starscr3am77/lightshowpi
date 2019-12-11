@@ -385,7 +385,9 @@ def audio_in():
             # data is below a threshold we will disregard it
             #print(data)
             audio_max = audioop.max(data, 2)
+            audio_max2 = audioop.maxpp(data,2)
 
+            print(audio_max, audio_max2)
             if audio_max < 270:
                 # we will fill the matrix with zeros and turn the lights off
                 matrix = np.zeros(hc.GPIOLEN, dtype="float32")
