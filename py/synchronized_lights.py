@@ -59,7 +59,7 @@ decoder.py: decoding mp3, ogg, wma, ...
 numpy: for FFT calculation
     http://www.numpy.org/
 """
-
+import socket
 import ConfigParser
 import argparse
 import atexit
@@ -93,7 +93,9 @@ import RunningStats
 
 # Make sure SYNCHRONIZED_LIGHTS_HOME environment variable is set
 # export SYNCHRONIZED_LIGHTS_HOME=/media/taylor/Data/Linux/Github/lightshowpi/
-os.environ['SYNCHRONIZED_LIGHTS_HOME'] = '/media/taylor/Data/Linux/Github/lightshowpi/'
+computer_name = socket.gethostname()
+if computer_name == "DalaiLama":
+    os.environ['SYNCHRONIZED_LIGHTS_HOME'] = '/media/taylor/Data/Linux/Github/lightshowpi/'
 HOME_DIR = os.getenv("SYNCHRONIZED_LIGHTS_HOME")
 
 if not HOME_DIR:
