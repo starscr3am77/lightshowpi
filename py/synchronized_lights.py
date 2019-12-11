@@ -138,6 +138,7 @@ import hardware_controller as hc
 # get copy of configuration manager
 cm = hc.cm
 cm.shuffle_pins()
+
 log.debug(cm.hardware.gpio_pins)
 
 parser.set_defaults(playlist=cm.lightshow.playlist_path)
@@ -381,7 +382,9 @@ def audio_in():
         if len(data):
             # if the maximum of the absolute value of all samples in
             # data is below a threshold we will disregard it
+            #print(data)
             audio_max = audioop.max(data, 2)
+
             if audio_max < 270:
                 # we will fill the matrix with zeros and turn the lights off
                 matrix = np.zeros(hc.GPIOLEN, dtype="float32")

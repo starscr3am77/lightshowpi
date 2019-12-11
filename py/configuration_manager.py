@@ -202,6 +202,7 @@ class Configuration(object):
 
     def shuffle_pins(self):
         random.shuffle(self.hardware.gpio_pins)
+        print("Shuffled pins", self.hardware.gpio_pins)
 
     def set_network(self):
         """

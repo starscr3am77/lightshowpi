@@ -121,7 +121,7 @@ class StatsOriginal(object):
 
 
 class Stats(StatsOriginal):
-    def __init__(self, length):
+    def __init__(self, length, B=.999, B2=.9999):
         """Constructor
 
         :param length: the length of the matrix
@@ -131,8 +131,8 @@ class Stats(StatsOriginal):
         self.old = None # StatsOriginal(length) # just to compare old stats vs new stats
         self.old_var = self.empty
         self.new_var = self.empty
-        self.B = .99 # should approach the old method as this approaches 1
-        self.B2 = .999 # we calculate variance slightly differently
+        self.B = B # should approach the old method as this approaches 1
+        self.B2 = B2 # we calculate variance slightly differently
 
     def preload(self, mean, std, sample_count=2):
         """Add a starting samples to the running standard deviation and mean

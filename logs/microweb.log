@@ -36415,3 +36415,13 @@ lost sys.stderr
 192.168.187.153 - - [08/Dec/2019 20:17:43] "GET /css/style.css HTTP/1.1" 200 -
 192.168.187.2 - - [09/Dec/2019 09:00:27] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.187.2 - - [09/Dec/2019 09:00:28] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.153 - - [09/Dec/2019 21:18:42] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [09/Dec/2019 21:18:56] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 21:37:15] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 21:37:17] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 21:37:19] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 22:31:29] "GET / HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 22:31:30] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 22:31:30] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 22:31:31] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [09/Dec/2019 22:31:32] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -

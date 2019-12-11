@@ -1,0 +1,16 @@
+#name: hwr
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pip>=19.3.1
+  - python>=2.7,<2.8
+  - pyyaml
+  - pip:
+    - git+https://tom_slick@bitbucket.org/tom_slick/rpi-audio-levels.git # https://bitbucket.org/tom_slick/rpi-audio-levels/src/master/
+    - git+https://tom_slick@bitbucket.org/tom_slick/decoder.py.git       # https://bitbucket.org/tom_slick/decoder.py/src/master/
+    - libasound2-dev
+    # MAKE SURE /opt/vc/src/hello_pi is there to compile rpi-audio-levels.git
+    # sudo apt-get install libasound2-dev
+#prefix: /panfs/pan.fsl.byu.edu/scr/grp/fslg_hwr/env/hwr
+
