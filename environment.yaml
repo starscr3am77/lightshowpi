@@ -11,6 +11,6 @@ dependencies:
     - git+https://tom_slick@bitbucket.org/tom_slick/decoder.py.git       # https://bitbucket.org/tom_slick/decoder.py/src/master/
     - libasound2-dev
     # MAKE SURE /opt/vc/src/hello_pi is there to compile rpi-audio-levels.git
-    # sudo apt-get install libasound2-dev
+    # sudo apt-get install libasound2-dev lame
 #prefix: /panfs/pan.fsl.byu.edu/scr/grp/fslg_hwr/env/hwr
 

@@ -92,6 +92,8 @@ import RunningStats
 
 
 # Make sure SYNCHRONIZED_LIGHTS_HOME environment variable is set
+# export SYNCHRONIZED_LIGHTS_HOME=/media/taylor/Data/Linux/Github/lightshowpi/
+os.environ['SYNCHRONIZED_LIGHTS_HOME'] = '/media/taylor/Data/Linux/Github/lightshowpi/'
 HOME_DIR = os.getenv("SYNCHRONIZED_LIGHTS_HOME")
 
 if not HOME_DIR:
@@ -159,7 +161,6 @@ if cm.lightshow.use_fifo:
     os.mkfifo(cm.lightshow.fifo, 0777)
 
 CHUNK_SIZE = 2048  # Use a multiple of 8 (move this to config)
-
 
 def end_early():
     """atexit function"""
@@ -927,6 +928,7 @@ def launch_curses(screen):
 
 def main():
     if "-in" in cm.lightshow.mode:
+        print("Audio in mode")
         audio_in()
     elif client:
         network_client()
