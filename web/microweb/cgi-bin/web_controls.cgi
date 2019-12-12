@@ -47,6 +47,17 @@ print """
                 <input type="hidden" name="message" value="Off"/>
                 <input id="off" type="submit" value="Lights OFF">
             </form>
+
+            <form method="post" action="web_controls.cgi">
+                <input type="hidden" name="message" value="Speakers On"/>
+                <input id="speakers_on" type="submit" value="SPEAKERS ON">
+            </form>
+
+             <form method="post" action="web_controls.cgi">
+                <input type="hidden" name="message" value="Speakers Off"/>
+                <input id="speakers_off" type="submit" value="SPEAKERS OFF">
+            </form>
+
 """ 
 
 if message:
@@ -61,6 +72,16 @@ if message:
     if message == "Next":
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         sleep(1)
+    if message == "Speakers On":
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        sleep(1)
+    if message == "Speakers Off":
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        sleep(1)
+    if message == "System Off":
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        sleep(1)
+
     if message == "Start":
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
@@ -83,6 +104,14 @@ else:
             <input id="start" type="submit" value="START">
         </form>
 """
+
+## Total system off
+print("""
+        <form method="post" action="web_controls.cgi">
+            <input type="hidden" name="message" value="System Off"/>
+            <input id="system_off" type="submit" value="LIGHTS/SPEAKERS OFF">
+        </form>
+""")
 
 if message:
     print """<h2>Executed command: %s</h2>""" % cgi.escape(message)

@@ -385,15 +385,15 @@ def audio_in():
         if len(data):
             # if the maximum of the absolute value of all samples in
             # data is below a threshold we will disregard it
-            #print(data)
-            audio_max = audioop.max(data, 2)
-            audio_max2 = audioop.maxpp(data,2)
+            # audio_max = audioop.max(data, 2)
 
-            print(audio_max, audio_max2)
-            if audio_max < 270:
+            # print(data)
+            audio_max2 = audioop.maxpp(data,2)
+            #print(audio_max, audio_max2)
+            if audio_max2 < 7000:
                 # we will fill the matrix with zeros and turn the lights off
-                matrix = np.zeros(hc.GPIOLEN, dtype="float32")
-                log.debug("below threshold: '" + str(audio_max) + "', turning the lights off")
+                matrix = np.zeros(hc.FREQ_BINS, dtype="float32")
+                log.debug("below threshold: '" + str(audio_max2) + "', turning the lights off")
             else:
                 matrix = fft_calc.calculate_levels(data)
                 running_stats.push(matrix)

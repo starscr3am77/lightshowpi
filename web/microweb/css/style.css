@@ -56,3 +56,32 @@ input[type="submit"] {
     background-color: #FFFFE0;
 }
 
+#system_off {
+    color:black;
+    background-color: yellow;
+}
+
+#system_off:hover {
+    color:black;
+    background-color: #FFFFE0;
+}
+
+#speakers_off {
+    color:black;
+    background-color: yellow;
+}
+
+#speakers_off:hover {
+    color:black;
+    background-color: #FFFFE0;
+}
+
+#speakers_on {
+    color:black;
+    background-color: yellow;
+}
+
+#speakers_on:hover {
+    color:black;
+    background-color: #FFFFE0;
+}
