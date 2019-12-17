@@ -19,3 +19,190 @@ lost sys.stderr
 192.168.187.2 - - [11/Dec/2019 23:04:48] CGI script exit status 0xb
 192.168.187.2 - - [11/Dec/2019 23:04:50] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.187.2 - - [11/Dec/2019 23:04:50] CGI script exit status 0xb
+192.168.187.2 - - [12/Dec/2019 00:18:16] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:18:17] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:18:19] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:18:22] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:18:25] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:18:28] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:20:02] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:20:04] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:20:47] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:25:15] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:25:17] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:25:59] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+sh: 1: Syntax error: Unterminated quoted string
+192.168.187.2 - - [12/Dec/2019 00:26:50] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:35:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:35:25] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:35:29] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:36:57] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:37:57] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+192.168.187.2 - - [12/Dec/2019 00:37:59] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:38:00] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 00:38:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 00:39:47] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.2 - - [12/Dec/2019 07:18:49] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 07:19:03] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 07:19:04] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 07:19:07] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [12/Dec/2019 09:10:25] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [12/Dec/2019 09:10:26] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.197 - - [12/Dec/2019 09:10:26] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [12/Dec/2019 09:10:26] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [12/Dec/2019 09:10:29] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 19:29:19] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 19:29:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 19:29:25] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:24:33] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:25:04] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:25:06] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:25:06] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:25:07] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:42:15] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 20:42:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [12/Dec/2019 21:09:47] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+python: can't open file '/send_commands.py': [Errno 2] No such file or directory
+192.168.187.153 - - [12/Dec/2019 21:59:04] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 21:59:04] code 404, message File not found
+192.168.187.153 - - [12/Dec/2019 21:59:04] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.187.153 - - [12/Dec/2019 21:59:04] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 21:59:05] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 21:59:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [12/Dec/2019 21:59:11] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [13/Dec/2019 18:07:00] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [13/Dec/2019 18:07:03] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [13/Dec/2019 20:26:42] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [13/Dec/2019 20:26:43] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [13/Dec/2019 20:26:49] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [14/Dec/2019 02:57:37] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:57:38] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:57:38] code 404, message File not found
+192.168.187.153 - - [14/Dec/2019 02:57:38] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.187.153 - - [14/Dec/2019 02:57:48] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:57:49] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:57:52] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:57:52] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:57:56] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:57:57] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:59:03] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:59:03] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:59:11] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:59:11] CGI script exit status 0x100
+192.168.187.153 - - [14/Dec/2019 02:59:15] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.153 - - [14/Dec/2019 02:59:16] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 09:10:34] code 404, message File not found
+192.168.187.2 - - [17/Dec/2019 09:10:34] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.187.2 - - [17/Dec/2019 09:10:34] code 404, message No such CGI script ('/cgi-bin/web_controls.cgi')
+192.168.187.2 - - [17/Dec/2019 09:10:34] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 404 -
+192.168.187.2 - - [17/Dec/2019 09:31:00] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 09:31:01] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 09:57:54] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 09:57:54] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 09:58:01] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 09:58:01] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 09:58:57] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 09:58:57] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 10:02:51] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 10:02:52] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 10:02:57] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 22, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 10:02:57] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 10:15:53] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+No handlers could be found for logger "root"
+192.168.187.2 - - [17/Dec/2019 10:15:55] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:16:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+No handlers could be found for logger "root"
+192.168.187.2 - - [17/Dec/2019 10:17:04] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+No handlers could be found for logger "root"
+192.168.187.2 - - [17/Dec/2019 10:17:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+No handlers could be found for logger "root"
+192.168.187.2 - - [17/Dec/2019 10:19:48] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 27, in <module>
+    import send_commands
+  File "/home/pi/broadlink/send_commands.py", line 5, in <module>
+    import my_logging
+  File "/home/pi/broadlink/my_logging.py", line 2, in <module>
+    from pathlib import Path
+ImportError: No module named pathlib
+192.168.187.2 - - [17/Dec/2019 10:19:48] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 10:19:55] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 27, in <module>
+    import send_commands
+  File "/home/pi/broadlink/send_commands.py", line 5, in <module>
+    import my_logging
+  File "/home/pi/broadlink/my_logging.py", line 2, in <module>
+    from pathlib import Path
+ImportError: No module named pathlib
+192.168.187.2 - - [17/Dec/2019 10:19:56] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 10:21:43] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:21:44] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:21:46] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:23:56] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:24:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:24:03] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:24:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -

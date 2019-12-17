@@ -10,6 +10,10 @@ import BaseHTTPServer
 import CGIHTTPServer_root
 import cgitb; cgitb.enable()  ## This line enables CGI error reporting
 import os
+
+broadlink = os.getenv("BROADLINK")
+
+
  
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer_root.CGIHTTPRequestHandler
