@@ -58,7 +58,7 @@ input[type="submit"] {
 
 #system_off {
     color:black;
-    background-color: yellow;
+    background-color: gray;
 }
 
 #system_off:hover {
@@ -68,7 +68,7 @@ input[type="submit"] {
 
 #speakers_off {
     color:black;
-    background-color: yellow;
+    background-color: gray;
 }
 
 #speakers_off:hover {
@@ -78,7 +78,7 @@ input[type="submit"] {
 
 #speakers_on {
     color:black;
-    background-color: yellow;
+    background-color: gray;
 }
 
 #speakers_on:hover {

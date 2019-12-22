@@ -206,3 +206,554 @@ ImportError: No module named pathlib
 192.168.187.2 - - [17/Dec/2019 10:24:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.187.2 - - [17/Dec/2019 10:24:03] "GET /favicon.png HTTP/1.1" 200 -
 192.168.187.2 - - [17/Dec/2019 10:24:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:42:02] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 10:42:03] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 11:52:13] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 11:52:15] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [17/Dec/2019 16:16:30] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 28, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.197 - - [17/Dec/2019 16:16:31] CGI script exit status 0x100
+192.168.187.197 - - [17/Dec/2019 16:16:43] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 28, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.197 - - [17/Dec/2019 16:16:43] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 16:17:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 28, in <module>
+    import send_commands
+ImportError: No module named send_commands
+192.168.187.2 - - [17/Dec/2019 16:17:06] CGI script exit status 0x100
+192.168.187.2 - - [17/Dec/2019 16:18:44] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 16:18:45] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 16:18:47] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 16:18:49] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [17/Dec/2019 16:18:54] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [17/Dec/2019 16:19:01] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [17/Dec/2019 16:19:01] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.197 - - [17/Dec/2019 16:19:01] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [17/Dec/2019 16:19:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [18/Dec/2019 22:19:52] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [18/Dec/2019 22:19:52] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.197 - - [18/Dec/2019 22:19:52] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [18/Dec/2019 22:19:54] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [19/Dec/2019 03:08:48] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.197 - - [19/Dec/2019 03:08:48] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.197 - - [19/Dec/2019 03:08:48] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.197 - - [19/Dec/2019 03:08:50] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 02:36:07] "GET / HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 02:36:07] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 02:36:08] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Sat Dec 21 02:37:27 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;24</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;25</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 26, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 32, in <module>
+    try:
+  File "/home/pi/broadlink/send_commands.py", line 43, in connect
+    connection.connect((host, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 110] Connection timed out
+192.168.0.107 - - [21/Dec/2019 02:48:37] "GET / HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 02:48:37] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 02:48:38] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 38
+    logger.print("Couldn't connect to server")
+               ^
+SyntaxError: invalid syntax
+192.168.0.107 - - [21/Dec/2019 02:48:38] CGI script exit status 0x100
+192.168.0.107 - - [21/Dec/2019 02:48:38] code 404, message File not found
+192.168.0.107 - - [21/Dec/2019 02:48:38] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.0.107 - - [21/Dec/2019 02:48:54] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+  File "/home/pi/lightshowpi/web/microweb/cgi-bin/web_controls.cgi", line 38
+    logger.print("Couldn't connect to server")
+               ^
+SyntaxError: invalid syntax
+192.168.0.107 - - [21/Dec/2019 02:48:54] CGI script exit status 0x100
+192.168.0.107 - - [21/Dec/2019 02:49:29] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Sat Dec 21 02:50:14 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;24</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;25</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 26, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+192.168.0.107 - - [21/Dec/2019 02:52:06] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:41:38] "GET / HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:41:38] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:41:39] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:43:47] "GET /css/style.css HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:45:00] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 10:47:09] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+192.168.0.107 - - [21/Dec/2019 10:49:18] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+192.168.0.107 - - [21/Dec/2019 10:51:27] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Sat Dec 21 10:53:08 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;24</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;25</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 26, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+192.168.0.107 - - [21/Dec/2019 11:13:42] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 11:15:52] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 11:26:38] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 11:29:00] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.107 - - [21/Dec/2019 12:15:22] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Sat Dec 21 12:16:07 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;24</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;25</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 26, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+192.168.0.108 - - [22/Dec/2019 00:26:29] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:26:30] "GET /css/style.css HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:26:32] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:26:32] CGI script exit status 0x100
+192.168.0.108 - - [22/Dec/2019 00:27:58] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:00] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:05] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:12] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:19] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:28:35] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [22/Dec/2019 00:30:44] "GET /favicon.png HTTP/1.1" 200 -

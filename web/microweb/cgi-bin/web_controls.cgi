@@ -18,16 +18,26 @@ import logging
 # Defaults        env_keep=SYNCHRONIZED_LIGHTS_HOME
 # Defaults        env_keep+=BROADLINK
 
+broadlink2 = "/home/pi/broadlink"
 broadlink = os.getenv("BROADLINK")
 sys.path.append(broadlink)
+sys.path.append(broadlink2)
 
 logger = logging.getLogger("root")
 logger.info(broadlink)
 logger.info(sys.version_info)
 
 import send_commands
-send_commands.logger
-connection = send_commands.connect()
+
+if False:
+    try:
+        connection = send_commands.connect()
+        no_connection=False
+    except:
+        no_connection=True
+        logger.warning("Couldn't connect to server")
+else:
+    no_connection = True
 
 cgitb.enable()  # for troubleshooting
 form = cgi.FieldStorage()
@@ -65,39 +75,51 @@ print """
                 <input id="off" type="submit" value="Lights OFF">
             </form>
 
-""" 
+"""
 
 if message:
     if message == "On":
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         os.system("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=on")
+        logger.info("Turned on lights")
     if message == "Off":
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         os.system("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=off")
+        logger.info("Turned off lights")
     if message == "Next":
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         sleep(1)
     if message == "Speakers On":
-        send_commands.send_command_server(connection, "Speakers", "on")
+        if not no_connection:
+            send_commands.send_command_server(connection, "Speakers", "on")
+            logger.info("Sent command to turn on speakers")
+
         #os.system("python ${BROADLINK}/send_commands.py --on Speakers")
         #os.system("echo 'broadlink: ${BROADLINK}'")
         sleep(1)
     if message == "Speakers Off":
-        send_commands.send_command_server(connection, "Speakers", "off")
+        if not no_connection:
+            send_commands.send_command_server(connection, "Speakers", "off")
+            logger.info("Sent command to turn off speakers")
+
         #os.system('python ${BROADLINK}/send_commands.py --off Speakers')
         sleep(1)
     if message == "System Off":
-        #os.system('python ${BROADLINK}/send_commands.py --off Speakers')
-        send_commands.send_command_server(connection, "Speakers", "off")
+        if not no_connection:
+            #os.system('python ${BROADLINK}/send_commands.py --off Speakers')
+            send_commands.send_command_server(connection, "Speakers", "off")
+            logger.info("Sent command to turn off system")
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         os.system("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=off")
         sleep(1)
 
     if message == "Start":
-        send_commands.send_command_server(connection, "Speakers", "on")
+        if not no_connection:
+            send_commands.send_command_server(connection, "Speakers", "on")
+            logger.info("Sent command to turn on speakers (part of Start)")
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
         os.system("${SYNCHRONIZED_LIGHTS_HOME}/bin/play_sms &")
@@ -142,3 +164,4 @@ if message:
     print """<h2>Executed command: %s</h2>""" % cgi.escape(message)
 
 print "</body></html>"
+
