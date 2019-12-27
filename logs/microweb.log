@@ -757,3 +757,529 @@ error: [Errno 98] Address already in use
 192.168.0.108 - - [22/Dec/2019 00:28:19] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.0.108 - - [22/Dec/2019 00:28:35] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
 192.168.0.108 - - [22/Dec/2019 00:30:44] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [24/Dec/2019 17:49:48] "GET / HTTP/1.1" 200 -
+192.168.0.108 - - [24/Dec/2019 17:49:51] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [24/Dec/2019 17:49:51] "GET /css/style.css HTTP/1.1" 200 -
+192.168.0.114 - - [26/Dec/2019 02:10:37] code 404, message File not found
+192.168.0.114 - - [26/Dec/2019 02:10:37] "HEAD /Belarc.html HTTP/1.1" 404 -
+192.168.0.108 - - [26/Dec/2019 13:35:32] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 13:35:33] "GET /css/style.css HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 13:35:33] "GET /favicon.png HTTP/1.1" 200 -
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 22:37:05 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;import&nbsp;logging<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;import&nbsp;threading<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;15</small>&nbsp;from&nbsp;broadlink&nbsp;import&nbsp;relay<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;16</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;17</small>&nbsp;logger&nbsp;=&nbsp;logging.getLogger("root")<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">broadlink <em>undefined</em>, relay <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: cannot import name relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('cannot import name relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'cannot import name relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 15, in &lt;module&gt;
+    from broadlink import relay
+ImportError: cannot import name relay
+
+-->
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 22:44:22 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;import&nbsp;logging<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;import&nbsp;threading<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;15</small>&nbsp;import&nbsp;broadlink.relay&nbsp;as&nbsp;relay<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;16</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;17</small>&nbsp;logger&nbsp;=&nbsp;logging.getLogger("root")<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">broadlink <em>undefined</em>, relay <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 15, in &lt;module&gt;
+    import broadlink.relay as relay
+ImportError: No module named relay
+
+-->
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 23:22:43 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;import&nbsp;logging<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;import&nbsp;threading<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;15</small>&nbsp;import&nbsp;relay<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;16</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;17</small>&nbsp;logger&nbsp;=&nbsp;logging.getLogger("root")<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 15, in &lt;module&gt;
+    import relay
+ImportError: No module named relay
+
+-->
+
+/home/pi/broadlink
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.NameError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 23:23:18 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;33</small>&nbsp;destination_port&nbsp;=&nbsp;57325<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;34</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;35</small>&nbsp;relay&nbsp;=&nbsp;threading.Thread(target=relay.TheServer,<br>
+</tt></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;36</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kwargs={"local_host":"",<br>
+</tt></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;37</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"local_port":39554,<br>
+</tt></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, <strong>threading</strong>&nbsp;= &lt;module 'threading' from '/usr/lib/python2.7/threading.pyc'&gt;, threading.<strong>Thread</strong>&nbsp;= &lt;class 'threading.Thread'&gt;, target <em>undefined</em>, kwargs <em>undefined</em>, <strong>destination_address</strong>&nbsp;= 'fife.entrydns.org', <strong>destination_port</strong>&nbsp;= 57325, <em>builtin</em> <strong>True</strong>&nbsp;= True, ).start <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.NameError'&gt;</strong>: name 'relay' is not defined
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+("name 'relay' is not defined",)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+"name 'relay' is not defined"
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 35, in &lt;module&gt;
+    relay = threading.Thread(target=relay.TheServer,
+NameError: name 'relay' is not defined
+
+-->
+
+/home/pi/broadlink
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.NameError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 23:23:29 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;33</small>&nbsp;destination_port&nbsp;=&nbsp;57325<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;34</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;35</small>&nbsp;relay&nbsp;=&nbsp;threading.Thread(target=relay.TheServer,<br>
+</tt></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;36</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kwargs={"local_host":"",<br>
+</tt></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;37</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"local_port":39554,<br>
+</tt></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, <strong>threading</strong>&nbsp;= &lt;module 'threading' from '/usr/lib/python2.7/threading.pyc'&gt;, threading.<strong>Thread</strong>&nbsp;= &lt;class 'threading.Thread'&gt;, target <em>undefined</em>, kwargs <em>undefined</em>, <strong>destination_address</strong>&nbsp;= 'fife.entrydns.org', <strong>destination_port</strong>&nbsp;= 57325, <em>builtin</em> <strong>True</strong>&nbsp;= True, ).start <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.NameError'&gt;</strong>: name 'relay' is not defined
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+("name 'relay' is not defined",)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+"name 'relay' is not defined"
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 35, in &lt;module&gt;
+    relay = threading.Thread(target=relay.TheServer,
+NameError: name 'relay' is not defined
+
+-->
+
+/home/pi/broadlink
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.NameError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 23:24:02 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;17</small>&nbsp;broadlink&nbsp;=&nbsp;os.getenv("BROADLINK")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;18</small>&nbsp;print(broadlink)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;19</small>&nbsp;STOP&nbsp;<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;20</small>&nbsp;server&nbsp;=&nbsp;BaseHTTPServer.HTTPServer<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;21</small>&nbsp;handler&nbsp;=&nbsp;CGIHTTPServer_root.CGIHTTPRequestHandler<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">STOP <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.NameError'&gt;</strong>: name 'STOP' is not defined
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+("name 'STOP' is not defined",)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+"name 'STOP' is not defined"
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 19, in &lt;module&gt;
+    STOP
+NameError: name 'STOP' is not defined
+
+-->
+
+192.168.0.108 - - [26/Dec/2019 23:25:20] "GET / HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 23:25:20] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 23:25:20] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 23:25:36] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+No handlers could be found for logger "root.relay"
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 47, in main_loop
+    self.on_accept()
+  File "/home/pi/broadlink/relay.py", line 69, in on_accept
+    logger.info("Closing connection with client side" + clientaddr)
+TypeError: cannot concatenate 'str' and 'tuple' objects
+
+192.168.0.108 - - [26/Dec/2019 23:35:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [26/Dec/2019 23:35:05] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 23:35:18] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+No handlers could be found for logger "root.relay"
+192.168.0.108 - - [26/Dec/2019 23:47:12] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 52, in main_loop
+    self.on_close()
+  File "/home/pi/broadlink/relay.py", line 73, in on_close
+    logger.info(self.s.getpeername() + "has disconnected")
+TypeError: can only concatenate tuple (not "str") to tuple
+
+192.168.0.108 - - [26/Dec/2019 23:54:57] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [26/Dec/2019 23:55:03] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [26/Dec/2019 23:55:03] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Thu Dec 26 23:55:24 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;##<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;import&nbsp;relay,&nbsp;socket<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;29</small>&nbsp;logger.info("Starting&nbsp;relay...")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;30</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, socket <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 28, in &lt;module&gt;
+    import relay, socket
+ImportError: No module named relay
+
+-->
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 00:00:14 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;##<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;import&nbsp;relay,&nbsp;socket<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;29</small>&nbsp;logger.info("Starting&nbsp;relay...")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;30</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, socket <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 28, in &lt;module&gt;
+    import relay, socket
+ImportError: No module named relay
+
+-->
+
+No handlers could be found for logger "root"
+192.168.0.108 - - [27/Dec/2019 00:03:33] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 52, in main_loop
+    self.on_close()
+  File "/home/pi/broadlink/relay.py", line 73, in on_close
+    logger.info(self.s.getpeername() + "has disconnected")
+TypeError: can only concatenate tuple (not "str") to tuple
+
+192.168.0.108 - - [27/Dec/2019 00:03:36] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:03:45] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 00:04:25] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+No handlers could be found for logger "root"
+True<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.EOFError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 00:09:41 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;42</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;destination_port&nbsp;=&nbsp;57325<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;43</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;44</small>&nbsp;input(is_remote)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;45</small>&nbsp;relay&nbsp;=&nbsp;threading.Thread(target=relay.TheServer,<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;46</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kwargs={"local_host":"",<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>input</strong>&nbsp;= &lt;built-in function input&gt;, <strong>is_remote</strong>&nbsp;= True</font></small></td></tr></table><p><strong>&lt;type 'exceptions.EOFError'&gt;</strong>: EOF when reading a line
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('EOF when reading a line',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'EOF when reading a line'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 44, in &lt;module&gt;
+    input(is_remote)
+EOFError: EOF when reading a line
+
+-->
+
+No handlers could be found for logger "root"
+192.168.0.108 - - [27/Dec/2019 00:10:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 00:10:20] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:10:22] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 52, in main_loop
+    self.on_close()
+  File "/home/pi/broadlink/relay.py", line 73, in on_close
+    logger.info(self.s.getpeername() + "has disconnected")
+TypeError: can only concatenate tuple (not "str") to tuple
+

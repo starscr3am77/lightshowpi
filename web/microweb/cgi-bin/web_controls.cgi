@@ -29,9 +29,13 @@ logger.info(sys.version_info)
 
 import send_commands
 
-if False:
+if True:
     try:
-        connection = send_commands.connect()
+        # Connect directly to Pi
+        #connection = send_commands.connect("192.168.187.103", 32001)
+        #connection = send_commands.connect("fife.entrydns.org", 57325)
+        # Connect to local thing
+        connection = send_commands.connect("localhost", port=39554)
         no_connection=False
     except:
         no_connection=True
