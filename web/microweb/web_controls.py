@@ -13,19 +13,21 @@ import os, sys
 import logging
 import threading
 
-logger = logging.getLogger("root")
 broadlink = os.getenv("BROADLINK")
+lspitools = os.getenv("SYNCHRONIZED_LIGHTS_HOME") + "/web/microweb"
+
 sys.path.append(broadlink)
+import relay, socket, my_logging
+
+logger = my_logging.setup_logging(lspitools + "/logs", log_name="relay_")
 
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer_root.CGIHTTPRequestHandler
 server_address = ("", 80)
-lspitools = os.getenv("SYNCHRONIZED_LIGHTS_HOME") + "/web/microweb"
 os.chdir(lspitools)
 handler.cgi_directories = ["/cgi-bin"]
 
-##
-import relay, socket
+## START INTERNAL RELAY SERVER
 logger.info("Starting relay...")
 
 try:
@@ -40,6 +42,7 @@ finally:
     if is_remote:
         destination_address = "fife.entrydns.org"
         destination_port = 57325
+        logging.info("Using remote")
 
 relay = threading.Thread(target=relay.TheServer,
                           kwargs={"local_host":"",
