@@ -57,5 +57,3 @@ try:
 except KeyboardInterrupt:
     os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
     os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
-
-
