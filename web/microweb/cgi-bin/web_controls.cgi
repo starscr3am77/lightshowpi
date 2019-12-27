@@ -14,6 +14,7 @@ import sys
 import logging
 
 # This script is run by SUDO! Make sure sudo python has the appropriate libraries, paths, etc.
+# Does not appear to use crontab environment
 # Broadlink path set in /etc/sudoers
 # Defaults        env_keep=SYNCHRONIZED_LIGHTS_HOME
 # Defaults        env_keep+=BROADLINK
@@ -97,7 +98,7 @@ if message:
         sleep(1)
     if message == "Speakers On":
         if not no_connection:
-            send_commands.send_command_server(connection, "Speakers", "on")
+            send_commands.send_command_server(connection, "Speakers", "on", confirm=False)
             logger.info("Sent command to turn on speakers")
 
         #os.system("python ${BROADLINK}/send_commands.py --on Speakers")
@@ -105,7 +106,7 @@ if message:
         sleep(1)
     if message == "Speakers Off":
         if not no_connection:
-            send_commands.send_command_server(connection, "Speakers", "off")
+            send_commands.send_command_server(connection, "Speakers", "off", confirm=False)
             logger.info("Sent command to turn off speakers")
 
         #os.system('python ${BROADLINK}/send_commands.py --off Speakers')
@@ -113,7 +114,7 @@ if message:
     if message == "System Off":
         if not no_connection:
             #os.system('python ${BROADLINK}/send_commands.py --off Speakers')
-            send_commands.send_command_server(connection, "Speakers", "off")
+            send_commands.send_command_server(connection, "Speakers", "off", confirm=False)
             logger.info("Sent command to turn off system")
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
@@ -122,7 +123,7 @@ if message:
 
     if message == "Start":
         if not no_connection:
-            send_commands.send_command_server(connection, "Speakers", "on")
+            send_commands.send_command_server(connection, "Speakers", "on", confirm=False)
             logger.info("Sent command to turn on speakers (part of Start)")
         os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
