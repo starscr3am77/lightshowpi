@@ -13,8 +13,6 @@ import os
 
 broadlink = os.getenv("BROADLINK")
 
-
- 
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer_root.CGIHTTPRequestHandler
 server_address = ("", 80)
