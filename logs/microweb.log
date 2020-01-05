@@ -1283,3 +1283,854 @@ Traceback (most recent call last):
     logger.info(self.s.getpeername() + "has disconnected")
 TypeError: can only concatenate tuple (not "str") to tuple
 
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 00:12:03 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;##<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;import&nbsp;relay,&nbsp;socket<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;29</small>&nbsp;logger.info("Starting&nbsp;relay...")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;30</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, socket <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 28, in &lt;module&gt;
+    import relay, socket
+ImportError: No module named relay
+
+-->
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 00:24:15 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;##<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;import&nbsp;relay,&nbsp;socket<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;29</small>&nbsp;logger.info("Starting&nbsp;relay...")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;30</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, socket <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 28, in &lt;module&gt;
+    import relay, socket
+ImportError: No module named relay
+
+-->
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.ImportError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 00:29:42 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;26</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;27</small>&nbsp;##<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;28</small>&nbsp;import&nbsp;relay,&nbsp;socket<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;29</small>&nbsp;logger.info("Starting&nbsp;relay...")<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;30</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">relay <em>undefined</em>, socket <em>undefined</em></font></small></td></tr></table><p><strong>&lt;type 'exceptions.ImportError'&gt;</strong>: No module named relay
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('No module named relay',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+'No module named relay'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 28, in &lt;module&gt;
+    import relay, socket
+ImportError: No module named relay
+
+-->
+
+No handlers could be found for logger "root"
+192.168.0.108 - - [27/Dec/2019 00:34:36] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 52, in main_loop
+    self.on_close()
+  File "/home/pi/broadlink/relay.py", line 73, in on_close
+    logger.info(self.s.getpeername() + "has disconnected")
+TypeError: can only concatenate tuple (not "str") to tuple
+
+192.168.0.108 - - [27/Dec/2019 00:34:57] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:35:00] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 00:35:32] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 00:35:58] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 00:36:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 00:36:57] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+No handlers could be found for logger "root"
+192.168.0.108 - - [27/Dec/2019 00:39:45] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 52, in main_loop
+    self.on_close()
+  File "/home/pi/broadlink/relay.py", line 73, in on_close
+    logger.info(self.s.getpeername() + "has disconnected")
+TypeError: can only concatenate tuple (not "str") to tuple
+
+192.168.0.108 - - [27/Dec/2019 00:40:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 00:40:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+No handlers could be found for logger "root"
+192.168.0.108 - - [27/Dec/2019 00:43:17] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 00:43:22] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:43:33] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+00:50:54 INFO Starting relay...
+00:50:54 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 00:51:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 00:51:10] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:51:44] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+00:54:02 INFO Starting relay...
+00:54:02 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 00:58:33] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 00:58:36] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 00:59:15] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:00:55] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:01:42] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 50, in main_loop
+    self.data = self.s.recv(buffer_size)
+error: [Errno 104] Connection reset by peer
+
+192.168.0.108 - - [27/Dec/2019 01:01:56] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 01:02:13] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 01:02:26] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 01:02:29] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 01:03:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:04:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+192.168.0.108 - - [27/Dec/2019 01:04:11] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:05:53] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 01:06:02] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+01:07:00 INFO Starting relay...
+01:07:00 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 01:08:52] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:08:54] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 01:09:56] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:15:49] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 104] Connection reset by peer')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+01:22:54 INFO Starting relay...
+01:22:54 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 01:23:41] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 01:23:49] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:24:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+01:31:34 INFO Starting relay...
+01:31:34 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 01:33:10] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+WARNING:root:
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:33:28] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+WARNING:root:
+INFO:root:Sent command to turn off speakers
+01:35:02 INFO Starting relay...
+01:35:02 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 01:35:46] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 01:36:15] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 104] Connection reset by peer')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+01:39:53 INFO Starting relay...
+01:39:53 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 01:40:03] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 01:41:20] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 01:53:26] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 10:37:08] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.0.108 - - [27/Dec/2019 10:38:00] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 104] Connection reset by peer')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+INFO:root:Sending i_off
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', '[Errno 32] Broken pipe')
+10:52:24 INFO Starting relay...
+10:52:24 ERROR __exit__
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 34, in __init__
+    self.server.bind((local_host, local_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 10:52:24 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;55</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;56</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;57</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;58</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;59</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 57, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+11:08:03 INFO Starting relay...
+11:08:03 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 11:09:03] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:10:38] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:10:39] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:10:44] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', "send_command_server() got an unexpected keyword argument 'confirm'")
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', "send_command_server() got an unexpected keyword argument 'confirm'")
+11:13:23 INFO Starting relay...
+11:13:23 ERROR __exit__
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 34, in __init__
+    self.server.bind((local_host, local_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 11:13:23 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;55</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;56</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;57</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;58</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;59</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 57, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+11:14:04 INFO Starting relay...
+11:14:04 ERROR __exit__
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 34, in __init__
+    self.server.bind((local_host, local_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;class 'socket.error'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.7.9: /usr/bin/python<br>Fri Dec 27 11:14:04 2019</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/pi/lightshowpi/web/microweb/web_controls.py">/home/pi/lightshowpi/web/microweb/web_controls.py</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;55</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;56</small>&nbsp;try:&nbsp;<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;57</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd&nbsp;=&nbsp;server(server_address,&nbsp;handler)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;58</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpd.serve_forever()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;59</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">httpd <em>undefined</em>, <strong>server</strong>&nbsp;= &lt;class BaseHTTPServer.HTTPServer&gt;, <strong>server_address</strong>&nbsp;= ('', 80), <strong>handler</strong>&nbsp;= &lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>__init__</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;, server_address=('', 80), RequestHandlerClass=&lt;class CGIHTTPServer_root.CGIHTTPRequestHandler&gt;, bind_and_activate=True)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;418</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;bind_and_activate:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;419</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;420</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_bind()<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;421</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_activate()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;422</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>server_bind</strong>&nbsp;= &lt;bound method HTTPServer.server_bind of &lt;BaseHTTPServer.HTTPServer instance&gt;&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/BaseHTTPServer.py">/usr/lib/python2.7/BaseHTTPServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;106</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;server_bind(self):<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;107</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Override&nbsp;server_bind&nbsp;to&nbsp;store&nbsp;the&nbsp;server&nbsp;name."""<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;108</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SocketServer.TCPServer.server_bind(self)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;109</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host,&nbsp;port&nbsp;=&nbsp;self.socket.getsockname()[:2]<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;110</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_name&nbsp;=&nbsp;socket.getfqdn(host)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>global</em> <strong>SocketServer</strong>&nbsp;= &lt;module 'SocketServer' from '/usr/lib/python2.7/SocketServer.pyc'&gt;, SocketServer.<strong>TCPServer</strong>&nbsp;= &lt;class SocketServer.TCPServer&gt;, SocketServer.TCPServer.<strong>server_bind</strong>&nbsp;= &lt;unbound method TCPServer.server_bind&gt;, <strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/SocketServer.py">/usr/lib/python2.7/SocketServer.py</a> in <strong>server_bind</strong>(self=&lt;BaseHTTPServer.HTTPServer instance&gt;)</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;432</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;self.allow_reuse_address:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;433</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.setsockopt(socket.SOL_SOCKET,&nbsp;socket.SO_REUSEADDR,&nbsp;1)<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;434</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.socket.bind(self.server_address)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;435</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.server_address&nbsp;=&nbsp;self.socket.getsockname()<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;436</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;BaseHTTPServer.HTTPServer instance&gt;, self.<strong>socket</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.socket.<strong>bind</strong>&nbsp;= &lt;bound method _socketobject.bind of &lt;socket._socketobject object&gt;&gt;, self.<strong>server_address</strong>&nbsp;= ('', 80)</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///usr/lib/python2.7/socket.py">/usr/lib/python2.7/socket.py</a> in <strong>meth</strong>(name='bind', self=&lt;socket._socketobject object&gt;, *args=(('', 80),))</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;222</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;223</small>&nbsp;def&nbsp;meth(name,self,*args):<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;224</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;getattr(self._sock,name)(*args)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;225</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;226</small>&nbsp;for&nbsp;_m&nbsp;in&nbsp;_socketmethods:<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>getattr</strong>&nbsp;= &lt;built-in function getattr&gt;, <strong>self</strong>&nbsp;= &lt;socket._socketobject object&gt;, self.<strong>_sock</strong>&nbsp;= &lt;socket._closedsocket object&gt;, <strong>name</strong>&nbsp;= 'bind', <strong>args</strong>&nbsp;= (('', 80),)</font></small></td></tr></table><p><strong>&lt;class 'socket.error'&gt;</strong>: [Errno 98] Address already in use
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+(98, 'Address already in use')
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>errno&nbsp;=
+98
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>filename&nbsp;=
+None
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+''
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>strerror&nbsp;=
+'Address already in use'
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/pi/lightshowpi/web/microweb/web_controls.py", line 57, in &lt;module&gt;
+    httpd = server(server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 98] Address already in use
+
+-->
+
+ERROR:root.utils:('broadlink: problem with send_command_server function, waiting 2 minutes...', "send_command_server() got an unexpected keyword argument 'confirm'")
+11:15:26 INFO Starting relay...
+11:15:26 ERROR __exit__
+192.168.0.108 - - [27/Dec/2019 11:17:15] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:17:16] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:23:59] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:24:00] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.108 - - [27/Dec/2019 11:24:12] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 11:24:25] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 11:24:34] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.108 - - [27/Dec/2019 11:24:45] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.0.100 - - [27/Dec/2019 19:07:21] "GET / HTTP/1.1" 200 -
+192.168.0.100 - - [27/Dec/2019 19:07:21] "GET /favicon.png HTTP/1.1" 200 -
+192.168.0.100 - - [27/Dec/2019 19:07:32] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.0.100 - - [27/Dec/2019 19:07:32] "GET /css/style.css HTTP/1.1" 200 -
+00:00:11 INFO Starting relay...
+00:00:11 ERROR __exit__
+23:17:07 INFO Starting relay...
+23:17:07 ERROR __exit__
+00:00:13 INFO Starting relay...
+00:00:13 ERROR __exit__
+00:00:12 INFO Starting relay...
+00:00:12 ERROR __exit__
+00:00:12 INFO Starting relay...
+00:00:12 ERROR __exit__
+00:17:07 INFO Starting relay...
+00:17:07 ERROR __exit__
+                                                        12:17:08 INFO Starting relay...
+12:17:08 ERROR __exit__
+12:17:08 INFO Starting relay...
+12:17:08 ERROR __exit__
+192.168.187.153 - - [04/Jan/2020 23:58:06] "GET / HTTP/1.1" 200 -
+192.168.187.153 - - [04/Jan/2020 23:58:07] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.153 - - [04/Jan/2020 23:58:07] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.153 - - [04/Jan/2020 23:58:07] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.153 - - [04/Jan/2020 23:58:09] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Turned on lights
+192.168.187.153 - - [04/Jan/2020 23:58:17] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+192.168.187.153 - - [04/Jan/2020 23:58:22] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.153 - - [04/Jan/2020 23:58:34] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+00:00:12 INFO Starting relay...
+00:00:12 ERROR __exit__
+01:02:49 INFO Starting relay...
+01:02:49 ERROR __exit__
+01:07:04 INFO Starting relay...
+01:07:04 ERROR __exit__
+01:07:04 INFO Using remote
+01:21:13 INFO Starting relay...
+01:21:13 ERROR '_socketobject' object has no attribute 'server_close'
+01:21:13 INFO Using remote
+01:29:18 INFO Starting relay...
+01:30:40 INFO Starting relay...
+01:30:40 INFO Connected to Broadlink using LAN
+192.168.187.2 - - [05/Jan/2020 01:30:48] "GET / HTTP/1.1" 200 -
+192.168.187.2 - - [05/Jan/2020 01:30:48] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [05/Jan/2020 01:30:49] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.2 - - [05/Jan/2020 01:30:49] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.2 - - [05/Jan/2020 01:30:51] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 50, in main_loop
+    self.data = self.s.recv(buffer_size)
+error: [Errno 104] Connection reset by peer
+
+192.168.187.2 - - [05/Jan/2020 01:30:53] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.2 - - [05/Jan/2020 01:30:57] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.2 - - [05/Jan/2020 01:31:04] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.2 - - [05/Jan/2020 01:31:12] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.2 - - [05/Jan/2020 01:31:20] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+192.168.187.2 - - [05/Jan/2020 01:31:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_on
+INFO:root:Sent command to turn on speakers
+192.168.187.2 - - [05/Jan/2020 01:31:38] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off system
+192.168.187.2 - - [05/Jan/2020 01:32:01] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+01:33:11 INFO Starting relay...
+01:33:11 INFO Connected to Broadlink using LAN
+192.168.187.2 - - [05/Jan/2020 01:33:14] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/pi/broadlink/relay.py", line 37, in __init__
+    self.main_loop()
+  File "/home/pi/broadlink/relay.py", line 50, in main_loop
+    self.data = self.s.recv(buffer_size)
+error: [Errno 104] Connection reset by peer
+
+192.168.187.2 - - [05/Jan/2020 01:33:16] "GET /favicon.png HTTP/1.1" 200 -
+192.168.187.2 - - [05/Jan/2020 01:33:23] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers
+192.168.187.2 - - [05/Jan/2020 01:33:26] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root:Sending i_off
+INFO:root:Sent command to turn off speakers

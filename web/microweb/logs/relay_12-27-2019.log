@@ -107,3 +107,55 @@
 10:52:24 INFO Starting relay...
 10:52:24 ERROR __exit__
 10:52:24 INFO Using remote
+11:08:03 INFO Starting relay...
+11:08:03 ERROR __exit__
+11:08:03 INFO Using remote
+11:09:03 INFO Got message
+11:09:03 ERROR [Errno 111] Connection refused
+11:09:03 INFO Can't establish connection with remote server.
+11:09:03 INFO Closing connection with client side('127.0.0.1', 44921)
+11:10:38 INFO Got message
+11:10:38 ERROR [Errno 111] Connection refused
+11:10:38 INFO Can't establish connection with remote server.
+11:10:38 INFO Closing connection with client side('127.0.0.1', 44923)
+11:10:44 INFO Got message
+11:10:45 ERROR [Errno 111] Connection refused
+11:10:45 INFO Can't establish connection with remote server.
+11:10:45 INFO Closing connection with client side('127.0.0.1', 44925)
+11:13:23 INFO Starting relay...
+11:13:23 ERROR __exit__
+11:13:23 INFO Using remote
+11:14:04 INFO Starting relay...
+11:14:04 ERROR __exit__
+11:14:04 INFO Using remote
+11:15:26 INFO Starting relay...
+11:15:26 ERROR __exit__
+11:15:26 INFO Using remote
+11:17:15 INFO Got message
+11:17:15 ERROR [Errno 111] Connection refused
+11:17:15 INFO Can't establish connection with remote server.
+11:17:15 INFO Closing connection with client side('127.0.0.1', 47136)
+11:23:59 INFO Got message
+11:23:59 ERROR [Errno 111] Connection refused
+11:23:59 INFO Can't establish connection with remote server.
+11:23:59 INFO Closing connection with client side('127.0.0.1', 47138)
+11:24:13 INFO Got message
+11:24:13 ERROR [Errno 111] Connection refused
+11:24:13 INFO Can't establish connection with remote server.
+11:24:13 INFO Closing connection with client side('127.0.0.1', 47140)
+11:24:26 INFO Got message
+11:24:26 ERROR [Errno 111] Connection refused
+11:24:26 INFO Can't establish connection with remote server.
+11:24:26 INFO Closing connection with client side('127.0.0.1', 47142)
+11:24:34 INFO Got message
+11:24:34 ERROR [Errno 111] Connection refused
+11:24:34 INFO Can't establish connection with remote server.
+11:24:34 INFO Closing connection with client side('127.0.0.1', 47144)
+11:24:45 INFO Got message
+11:24:45 ERROR [Errno 111] Connection refused
+11:24:45 INFO Can't establish connection with remote server.
+11:24:45 INFO Closing connection with client side('127.0.0.1', 47146)
+19:07:32 INFO Got message
+19:07:52 ERROR [Errno -3] Temporary failure in name resolution
+19:07:52 INFO Can't establish connection with remote server.
+19:07:52 INFO Closing connection with client side('127.0.0.1', 47220)

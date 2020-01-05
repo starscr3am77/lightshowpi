@@ -33,8 +33,13 @@ logger.info("Starting relay...")
 try:
     destination_address = "192.168.187.103"
     destination_port = 32001
-    with socket.socket() as s:
+ 
+    try:
+        s = socket.socket()
         is_remote = s.connect_ex((destination_address, destination_port))
+    finally:
+        s.close()
+
 except Exception as e:
     logger.error(str(e))
     is_remote=True
@@ -42,7 +47,9 @@ finally:
     if is_remote:
         destination_address = "fife.entrydns.org"
         destination_port = 57325
-        logging.info("Using remote")
+        logger.info("Using remote WAN address for Broadlink")
+    else:
+        logger.info("Connected to Broadlink using LAN")
 
 relay = threading.Thread(target=relay.TheServer,
                           kwargs={"local_host":"",
