@@ -239,6 +239,13 @@ class Lightshow(object):
         brightness = (brightness / (self.std * (self.sd_low + self.sd_high))) \
             * (1.0 - (self.attenuate_pct / 100.0))
 
+        # FEWER FREQUENCIES
+        if hasattr(hc, "FREQ_BINS") and hc.FREQ_BINS == hc.GPIOLEN / 2:
+            brightness2 = matrix - mean + (std * cm.lightshow.SD_low2)
+            brightness2 = (brightness / (std * (cm.lightshow.SD_low2 + cm.lightshow.SD_high2))) * \
+                          (1.0 - (cm.lightshow.attenuate_pct / 100.0))
+            brightness = np.append(brightness, brightness2)
+
         # insure that the brightness levels are in the correct range
         brightness = clip(brightness, 0.0, 1.0)
         # brightness = round(brightness, decimals=3)
@@ -498,7 +505,14 @@ class Lightshow(object):
                 # if the maximum of the absolute value of all samples in
                 # data is below a threshold we will disregard it
                 audio_max = audioop.max(data, 2)
-                if audio_max < 250:
+
+                audio_max2 = audioop.maxpp(data, 2)
+                # print(audio_max, audio_max2)
+                if audio_max2 < 7000 and hasattr(hc, "FREQ_BINS") :
+                    # we will fill the matrix with zeros and turn the lights off
+                    matrix = np.zeros(hc.FREQ_BINS, dtype="float32")
+                    log.debug("below threshold: '" + str(audio_max2) + "', turning the lights off")
+                elif False and audio_max < 250:
                     # we will fill the matrix with zeros and turn the lights off
                     matrix = np.zeros(cm.hardware.gpio_len, dtype="float32")
                     log.debug("below threshold: '" + str(audio_max) + "', turning the lights off")
