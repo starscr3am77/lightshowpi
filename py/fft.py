@@ -1,8 +1,8 @@
 #
 # Licensed under the BSD license.  See full license in LICENSE file.
-# http://www.lightshowpi.com/
+# http://www.lightshowpi.org/
 #
-# Author: Todd Giles (todd@lightshowpi.com)
+# Author: Todd Giles (todd@lightshowpi.org)
 # Author: Tom Enos (tomslick.ca@gmail.com)
 
 """FFT methods for computing / analyzing frequency response of audio.
@@ -22,7 +22,7 @@ numpy: for array support - http://www.numpy.org/
 rpi-audio-levels - https://bitbucket.org/tom_slick/rpi-audio-levels (modified for lightshowpi)
 """
 
-import ConfigParser
+import configparser
 import logging
 import os.path
 from numpy import *
@@ -40,7 +40,8 @@ class FFT(object):
                  max_frequency,
                  custom_channel_mapping,
                  custom_channel_frequencies,
-                 input_channels=2):
+                 input_channels=2,
+                 use_gpu=True):
         """
         :param chunk_size: chunk size of audio data
         :type chunk_size: int
@@ -79,30 +80,23 @@ class FFT(object):
         self.custom_channel_mapping = custom_channel_mapping
         self.custom_channel_frequencies = custom_channel_frequencies
         self.frequency_limits = self.calculate_channel_frequency()
-        self.config = ConfigParser.RawConfigParser(allow_no_value=True)
+        self.config = configparser.RawConfigParser(allow_no_value=True)
         self.config_filename = ""
-        self.audio_levels = AudioLevels(math.log(chunk_size / 2, 2), num_bins)
+        self.use_gpu = use_gpu
+        if (self.use_gpu):
+            self.audio_levels = AudioLevels(math.log(chunk_size / 2, 2), num_bins)
 
         fl = array(self.frequency_limits)
-
-        # [[20.             45.62291182]
-        #  [45.62291182    104.07250417]
-        # [104.07250417    237.40453404]
-        # [237.40453404    541.55430616]
-        # [541.55430616    1235.3642179]
-        # [1235.3642179    2818.0456392]
-        # [2818.0456392    6428.37238566]
-        # [6428.37238566  14664.05332617]]
-
         self.piff = ((fl * self.chunk_size) / self.sample_rate).astype(int)
 
         for a in range(len(self.piff)):
             if self.piff[a][0] == self.piff[a][1]:
                 self.piff[a][1] += 1
-        self.piff = self.piff.tolist() # list of the frequencies
-        # [[0, 1], [1, 4], [4, 10], [10, 23], [23, 52], [52, 120], [120, 274], [274, 625]]
+        self.piff = self.piff.tolist()
 
-
+    def calculate_piff(self, val, chunk_size, sample_rate):
+        return int(chunk_size * val / sample_rate) 
+        
     def calculate_levels(self, data):
         """Calculate frequency response for each channel defined in frequency_limits
 
@@ -136,8 +130,21 @@ class FFT(object):
 
         # Apply FFT - real data
         # Calculate the power spectrum
-        cache_matrix = array(self.audio_levels.compute(data, self.piff)[0])
-        cache_matrix[isinf(cache_matrix)] = 0.0
+        if (self.use_gpu):
+            cache_matrix = array(self.audio_levels.compute(data, self.piff)[0])
+            cache_matrix[isinf(cache_matrix)] = 0.0
+
+        else:
+            matrix = fft.rfft(data)
+            matrix = delete(matrix, len(matrix) - 1)
+
+            power = abs(matrix) ** 2
+
+            cache_matrix = zeros(self.num_bins)
+            for i in range(self.num_bins):
+                psum = sum(power[self.calculate_piff(self.frequency_limits[i][0], self.chunk_size, self.sample_rate):self.calculate_piff(self.frequency_limits[i][1], self.chunk_size, self.sample_rate):1])
+                if (psum): 
+                    cache_matrix[i] = log10(psum)
 
         return cache_matrix
 
@@ -218,7 +225,7 @@ class FFT(object):
         else:
             has_config = True
             with open(self.config_filename) as f:
-                self.config.readfp(f)
+                self.config.read_file(f)
 
         fft_cache = dict()
         fft_current = dict()
@@ -245,7 +252,7 @@ class FFT(object):
                 fft_cache["custom_channel_frequencies"] = temp
 
             fft_cache["input_channels"] = self.config.getint("fft", "input_channels")
-        except ConfigParser.Error:
+        except configparser.Error:
             has_config = False
 
         fft_current["chunk_size"] = self.chunk_size
@@ -261,9 +268,6 @@ class FFT(object):
             has_config = False
             logging.warn("Cached config data does not match")
 
-        if has_config:
-            self.audio_levels = None
-            
         return has_config
 
     def save_config(self):

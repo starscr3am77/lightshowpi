@@ -1,3 +1,6 @@
+*.log
+*credentials*
+
 # Ignore decoder.py and fileinfo.py (if installed locally)
 decoder.py
 fileinfo.py
@@ -9,17 +12,14 @@ install.log
 # Ignore all compiled python files
 *.pyc
 
-# ignore pycharm
-.idea
-*.xml
-
-
 # Ignore Other Dev Files
 sftp-config.json
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 # Ignore Dolphin View settings files
 .directory
+
+# Ignore all LED configs except default
+Led[0-9].
+cfg
+
+.idea/

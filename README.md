@@ -4,7 +4,7 @@ All files here are free to use under the BSD License (see the LICENSE file for d
 ask in return is that you send any updates / improvements you may make to them back to us so 
 that we can all benefit from your improvements!
 
-Join us on our [Google+ community page](https://plus.google.com/communities/101789596301454731630) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
+Join us on our [Reddit page](https://www.reddit.com/r/LightShowPi/) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
 
 Thanks, and enjoy ;)
 
@@ -46,12 +46,67 @@ A huge thanks to all those that have contributed to the Lightshow Pi codebase:
 * Eric Higdon
 * Tom Enos
 * Brandon Lyon
-* Ken B (K5ENB)
+* Ken B
 * Paul Barnett
 * Anthony Tod
+* Brent Reinhard
 
 Release Notes
 ============
+
+2021/11/09 :: Version 3.20
+-------------------------------
+
+* Fixes for Pi4(B), kernel and Debian 11 based OS
+* dir_play support multiple uploads
+
+2019/12/24 :: Version 3.11
+-------------------------------
+
+* microweb - Directory Play page under Playlist page
+
+2019/12/20 :: Version 3.10
+-------------------------------
+
+* network - support for server/serverjson send to specific IPs
+* LED - add tools/led_test.py 
+* add Arduino/nodemcu/lspi-gpio-mcp23017-0.ino for nodemcu/MCP23017 combination to allow 16 GPIOs
+
+2019/11/27 :: Version 3.02
+-------------------------------
+
+* bin/vol to support USB sound devices
+* serverjson fix for hardware_controller.py and sketch v1.5, broadcast bug
+* minor bugs and error handling 
+
+2019/11/09 :: Version 3.01
+-------------------------------
+
+* Expander chipset bug fixed
+* Custom LED strip color maps, allow LEDs to work in network client mode 
+
+2019/10/05 :: Version 3.0
+-------------------------------
+
+* Upgrade to python 3.x
+* Various bug-fixes and updates to support install on latest Raspbian versions and Pi 4
+
+2018/10/16 :: Version 1.4
+-------------------------------
+
+* Microweb V3 with multiple features
+* More patterns and features for RGB LED Pixels
+* Option to add argument --config=overridesX.cfg to synchronized_lights.py and others
+* Networking serverraw option and NodeMCU sketch for client device 
+* Various bug-fixes and updates to support install on latest Raspbian versions and Pi 3b+
+
+2017/10/27 :: Version 1.3
+-------------------------------
+
+* Added initial support for controlling individually controllable RGB LED lights (thanks to Tom Enos, Ken B, and Chris Usey)
+* Addition of the "microweb" UI for controlling your lightshow (thanks to Ken B)
+* Twitter support, tweeting current song playing (thanks to Brent Reinhard and Ken B)
+* Various bug-fixes and updates to support latest kernel versions (thanks to Ken B)
 
 2016/10/16 :: Version 1.2
 -------------------------------
@@ -84,6 +139,3 @@ Release Notes
 -------------------------------
 
 * First "stable" release
-=======
-# lightshowpi
-Lightshowpi

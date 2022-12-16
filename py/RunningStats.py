@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 # Licensed under the BSD license.  See full license in LICENSE file.
-# http://www.lightshowpi.com/
+# http://www.lightshowpi.org/
 #
 # Author: Tom Enos
 #
@@ -19,9 +19,11 @@ Third party dependencies:
 numpy: for calculation
     http://www.numpy.org/
 """
-import numpy
 
-class StatsOriginal(object):
+from numpy import *
+
+
+class Stats(object):
     def __init__(self, length):
         """Constructor
         
@@ -29,43 +31,42 @@ class StatsOriginal(object):
         :type length: int
         """
         self.length = length
-        self.empty = numpy.zeros(length, dtype='float32')
         self.clear()
         self.sample_count = 0
-        self.old_mean = self.empty
-        self.old_std = self.empty
-        self.new_mean = self.empty
-        self.new_std = self.empty
+        self.old_mean = zeros(length, dtype='float32')
+        self.old_std = zeros(length, dtype='float32')
+        self.new_mean = zeros(length, dtype='float32')
+        self.new_std = zeros(length, dtype='float32')
 
     def clear(self):
         self.sample_count = 0
-        self.old_mean = self.empty
-        self.old_std = self.empty
-        self.new_mean = self.empty
-        self.new_std = self.empty
+        self.old_mean = zeros(self.length, dtype='float32')
+        self.old_std = zeros(self.length, dtype='float32')
+        self.new_mean = zeros(self.length, dtype='float32')
+        self.new_std = zeros(self.length, dtype='float32')
 
-    def preload(self, mean, std, sample_count=2):
-        """Add a starting samples to the running standard deviation and mean
+    def preload(self, mean_value, std_value, sample_count=2):
+        """Add a starting samples to the running standard deviation and mean_value
         
         This data does not need to be accurate.  It is only a base starting
         point for our light show.  With out preloading some values the show 
         will start with all lights on and then slowly change to what we want
         to see.  
         
-        :param mean: new sample mean starting point
-        :type mean: numpy array
-        :param std: new sample standard deviation starting point
-        :type std: numpy array
+        :param mean_value: new sample mean_value starting point
+        :type mean_value: numpy array
+        :param std_value: new sample standard deviation starting point
+        :type std_value: numpy array
         :param sample_count: how many samples to start with (min 2)
         :type sample_count: int
         """
-        if len(mean) == self.length and len(
-                std) == self.length and sample_count > 1 and self.sample_count == 0:
+        if len(mean_value) == self.length and len(
+                std_value) == self.length and sample_count > 1 and self.sample_count == 0:
             # cast all arrays to numpy just to make sure the data type is correct
-            self.new_mean = numpy.array(mean, dtype='float32')
-            self.new_std = numpy.array(std, dtype='float32')
-            self.old_mean = numpy.array(mean, dtype='float32')
-            self.old_std = numpy.array(std, dtype='float32')
+            self.new_mean = array(mean_value, dtype='float32')
+            self.new_std = array(std_value, dtype='float32')
+            self.old_mean = array(mean_value, dtype='float32')
+            self.old_std = array(std_value, dtype='float32')
             self.sample_count = sample_count
 
     def push(self, data):
@@ -77,12 +78,17 @@ class StatsOriginal(object):
         """
         self.sample_count += 1
 
-        self.new_mean = self.old_mean + (data - self.old_mean) / self.sample_count
-        self.new_std = self.old_std + (data - self.old_mean) * (data - self.new_mean)
+        if self.sample_count == 1:
+            self.old_mean = self.new_mean
+            self.new_mean = data
+            self.old_std = zeros(length, dtype='float32')
+        else:
+            self.new_mean = self.old_mean + (data - self.old_mean) / self.sample_count
+            self.new_std = self.old_std + (data - self.old_mean) * (data - self.new_mean)
 
-        # set up for next iteration
-        self.old_mean = self.new_mean
-        self.old_std = self.new_std
+            # set up for next iteration
+            self.old_mean = self.new_mean
+            self.old_std = self.new_std
 
     def num_data_values(self):
         """Get the current number of observations in the sample
@@ -109,7 +115,7 @@ class StatsOriginal(object):
         if self.sample_count > 1:
             return self.new_std / (self.sample_count - 1.0)
         else:
-            return self.empty
+            return zeros(length, dtype='float32')
 
     def std(self):
         """Get the current standard deviation 
@@ -117,96 +123,4 @@ class StatsOriginal(object):
         :return: current standard deviation
         :rtype: numpy array
         """
-        return numpy.sqrt(self.variance())
-
-
-class Stats(StatsOriginal):
-    def __init__(self, length, B=.999, B2=.9999):
-        """Constructor
-
-        :param length: the length of the matrix
-        :type length: int
-        """
-        super(Stats, self).__init__(length)
-        self.old = None # StatsOriginal(length) # just to compare old stats vs new stats
-        self.old_var = self.empty
-        self.new_var = self.empty
-        self.B = B # should approach the old method as this approaches 1
-        self.B2 = B2 # we calculate variance slightly differently
-
-    def preload(self, mean, std, sample_count=2):
-        """Add a starting samples to the running standard deviation and mean
-
-        This data does not need to be accurate.  It is only a base starting
-        point for our light show.  With out preloading some values the show
-        will start with all lights on and then slowly change to what we want
-        to see.
-
-        :param mean: new sample mean starting point
-        :type mean: numpy array
-        :param std: new sample standard deviation starting point
-        :type std: numpy array
-        :param sample_count: how many samples to start with (min 2)
-        :type sample_count: int
-        """
-        if self.old:
-            self.old.preload(mean, std, sample_count)
-
-        if len(mean) == self.length and len(
-                std) == self.length and sample_count > 1 and self.sample_count == 0:
-            # cast all arrays to numpy just to make sure the data type is correct
-            self.new_mean = numpy.array(mean * (1-self.B**sample_count), dtype='float32')
-            self.new_var = numpy.array(std * (1-self.B2**sample_count), dtype='float32')
-            self.old_mean = self.new_mean
-            self.old_var = self.new_var
-            self.sample_count = sample_count
-
-        #print("Preloading", self.new_mean, self.new_var, sample_count)
-
-    def push(self, data):
-        """Add a new sample to the running standard deviation and mean
-
-        data should be numpy array the same length as self.length
-        :param data: new sample data, this must be a numpy array
-        :type data: numpy array
-        """
-        if self.old:
-            self.old.push(data)
-        self.sample_count += 1
-        self.new_mean = self.B * self.old_mean + (1 - self.B) * data
-        self.new_var = self.B2 * self.old_var + (1 - self.B2) * (data-self.mean()) ** 2
-
-        # set up for next iteration
-        self.old_mean = self.new_mean
-        self.old_var = self.new_var
-
-        # if self.old:
-            # print(self.old.mean()[4], self.mean()[4])
-            # print(self.old.variance()[4], self.variance()[4])
-
-    def num_data_values(self):
-        """Get the current number of observations in the sample
-
-        :return: current samples observed
-        :rtype: int
-        """
-        return self.sample_count
-
-    def mean(self):
-        """Get the current mean
-
-        :return: current sampled mean
-        :rtype: numpy array
-        """
-        return self.new_mean/(1-self.B**self.sample_count)
-
-    def variance(self):
-        """Get the current variance
-
-        :return: current variance
-        :rtype: numpy array
-        """
-        if self.sample_count > 1:
-            return self.new_var/(1-self.B2**self.sample_count)
-        else:
-            return self.empty
+        return sqrt(self.variance())

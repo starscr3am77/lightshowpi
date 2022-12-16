@@ -6,64 +6,34 @@
 #
 # Author: Ken B
 
-import BaseHTTPServer
 import CGIHTTPServer_root
 import cgitb; cgitb.enable()  ## This line enables CGI error reporting
 import os, sys
-import logging
-import threading
+import relay_server
 
-broadlink = os.getenv("BROADLINK")
-lspitools = os.getenv("SYNCHRONIZED_LIGHTS_HOME") + "/web/microweb"
+def excepthook(etype,ex,tb):
+    sys.stdout.flush()
 
-sys.path.append(broadlink)
-import relay, socket, my_logging
+sys.excepthook = excepthook
 
-logger = my_logging.setup_logging(lspitools + "/logs", log_name="relay_")
-
-server = BaseHTTPServer.HTTPServer
+server = CGIHTTPServer_root.HTTPServer
 handler = CGIHTTPServer_root.CGIHTTPRequestHandler
-server_address = ("", 80)
+server_address = ("", 8282)
+lspitools = os.getenv("SYNCHRONIZED_LIGHTS_HOME") + "/web/microweb"
 os.chdir(lspitools)
 handler.cgi_directories = ["/cgi-bin"]
 
-## START INTERNAL RELAY SERVER
-logger.info("Starting relay...")
+def start_server():
+    relay_server.create_relay()
 
-try:
-    destination_address = "192.168.187.103"
-    destination_port = 32001
- 
-    try:
-        s = socket.socket()
-        is_remote = s.connect_ex((destination_address, destination_port))
-    finally:
-        s.close()
+    try: 
+        httpd = server(server_address, handler)
+        httpd.serve_forever()
 
-except Exception as e:
-    logger.error(str(e))
-    is_remote=True
-finally:
-    if is_remote:
-        destination_address = "fife.entrydns.org"
-        destination_port = 57325
-        logger.info("Using remote WAN address for Broadlink")
-    else:
-        logger.info("Connected to Broadlink using LAN")
-
-relay = threading.Thread(target=relay.TheServer,
-                          kwargs={"local_host":"",
-                                  "local_port":39554,
-                                  "destination_address":destination_address,
-                                  "destination_port":destination_port,
-                                  "autostart":True},
-                          ).start()
+    except KeyboardInterrupt:
+        os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
 
 
-try: 
-    httpd = server(server_address, handler)
-    httpd.serve_forever()
-
-except KeyboardInterrupt:
-    os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
-    os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+if __name__=='__main__':
+    start_server()

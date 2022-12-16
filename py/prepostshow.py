@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 #
 # Licensed under the BSD license.  See full license in LICENSE file.
-# http://www.lightshowpi.com/
+# http://www.lightshowpi.org/
 #
-# Author: Todd Giles (todd@lightshowpi.com)
+# Author: Todd Giles (todd@lightshowpi.org)
 # Author: Chris Usey (chris.usey@gmail.com)
 # Author: Tom Enos (tomslick.ca@gmail.com)
 
-"""Preshow and Postshow functionality for the lightshows.
+"""Preshow and Postshow functionality for the light show.
 
 Your lightshow can be configured to have a "preshow" before each
 individual song is played or a "postshow" after each individual
@@ -21,7 +21,7 @@ or
 sudo python prepostshow.py "postshow"
 """
 
-import __builtin__
+import builtins
 import logging
 import os
 import subprocess
@@ -29,6 +29,7 @@ import signal
 import sys
 import time
 import threading
+import argparse
 
 
 class PrePostShow(object):
@@ -43,7 +44,7 @@ class PrePostShow(object):
     done = 0
     play_now_interrupt = 1
 
-    def __init__(self, show="preshow", hardware=None):
+    def __init__(self, show="preshow", hardware=None, config=None):
         """
 
         :param show: which show should be preformed
@@ -55,13 +56,10 @@ class PrePostShow(object):
         if hardware:
             self.hc = hardware
         else:
-            self.hc = __import__('hardware_controller')
+            self.hc = __import__('hardware_controller').Hardware(param_config=config)
             self.hc.initialize()
 
         self.config = self.hc.cm.lightshow.get(show)
-
-        # SHUFFLE THE CHANNELS!
-        # self.hc.cm.shuffle_pins()
         self.show = show
         self.audio = None
 
@@ -211,7 +209,11 @@ class PrePostShow(object):
 if __name__ == "__main__":
     show_to_call = 'preshow'
 
-    if len(sys.argv) > 1:
-        show_to_call = sys.argv[1]
+    parser = argparse.ArgumentParser()
+    parser.add_argument('show_to_call', metavar='show', type=str, nargs='?',
+                    help='preshow or postshow')
+    parser.add_argument('--config', default="",
+                    help='Config File Override')
+    args = parser.parse_args()
 
-    PrePostShow(show_to_call).execute()
+    PrePostShow(show_to_call,config=args.config).execute()

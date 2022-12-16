@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #
 # Licensed under the BSD license.  See full license in LICENSE file.
-# http://www.lightshowpi.com/
+# http://www.lightshowpi.org/
 #
-# Author: Todd Giles (todd@lightshowpi.com)
+# Author: Todd Giles (todd@lightshowpi.org)
 #
 # Modifications by: Chris Usey (chris.usey@gmail.com)
 # Modifications by: Tom Enos (tomslick.ca@gmail.com)
@@ -17,7 +17,7 @@ import signal
 import sys
 import time
 
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from googlevoice import Voice
 from googlevoice.util import LoginError, ValidationError
 from threading import Thread
@@ -25,7 +25,7 @@ from threading import Thread
 import configuration_manager
 import commands
 
-cm = configuration_manager.Configuration(True)
+cm = configuration_manager.Configuration(sms=True)
 
 logging.basicConfig(filename=configuration_manager.LOG_DIR + '/music_and_lights.check.dbg',
                     format='[%(asctime)s] %(levelname)s {%(pathname)s:%(lineno)d}'
@@ -93,13 +93,12 @@ class Sms(Thread):
         except NameError:
             self.playlist = cm.sms.playlist_path
 
-        commands.start(cm)
-        self.voice = Voice()
-
         self.songs = list()
         logging.info('loading playlist ' + self.playlist)
 
         self.load_playlist()
+        commands.start(cm)
+        self.voice = Voice()
 
     def run(self):
         """Overloaded Thread.run, runs the update
@@ -107,7 +106,13 @@ class Sms(Thread):
         self.login()
 
         while not self.cancelled:
-            self.update()
+            try:
+                self.update()
+            except:
+                logging.error(
+                    'Error when checking for sms messages, will try again in 15 seconds.',
+                    exc_info=1)
+
             time.sleep(15)
 
     def cancel(self):
@@ -198,7 +203,7 @@ class Sms(Thread):
 
         notifying users of any of their requests that are now playing
         """
-        with open(self.playlist, 'rb') as playlist_fp:
+        with open(self.playlist, 'rt') as playlist_fp:
             fcntl.lockf(playlist_fp, fcntl.LOCK_SH)
             playlist = csv.reader(playlist_fp, delimiter='\t')
             self.songs = list()
@@ -210,8 +215,8 @@ class Sms(Thread):
                     logging.error('Invalid playlist.  Each line should be in the form: '
                                   '<song name><tab><path to song>')
                     logging.warning('Removing invalid entry')
-                    print "Error found in playlist"
-                    print "Deleting entry:", song
+                    print ("Error found in playlist")
+                    print ("Deleting entry:", song)
                     continue
                 elif len(song) == 2:
                     song.append(set())
@@ -237,7 +242,7 @@ class Sms(Thread):
 
     def update_playlist(self):
         """Update playlist with latest votes"""
-        with open(self.playlist, 'wb') as playlist_fp:
+        with open(self.playlist, 'wt') as playlist_fp:
             fcntl.lockf(playlist_fp, fcntl.LOCK_EX)
             writer = csv.writer(playlist_fp, delimiter='\t')
             for song in self.songs:
@@ -303,7 +308,10 @@ if __name__ == "__main__":
                              'configuration file for Google Voice')
     parser.add_argument('--log', default='INFO',
                         help='Set the logging level. levels:INFO, DEBUG, WARNING, ERROR, CRITICAL')
+    parser.add_argument('--config', default=None, help='Config File Override')
     args = parser.parse_args()
+
+    cm = configuration_manager.Configuration(sms=True,param_config=args.config)
 
     check_sms = Sms(args.setup)
     signal.signal(signal.SIGINT, lambda x, y: check_sms.cancel())

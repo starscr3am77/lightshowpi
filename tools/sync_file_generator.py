@@ -32,28 +32,28 @@ sys.path.insert(0, HOME_DIR + "/py")
 
 # import the configuration_manager and fft now that we can
 import fft
-import configuration_manager as cm
+
+import hardware_controller
+
+hc = hardware_controller.Hardware()
+
+# get copy of configuration manager
+cm = hc.cm
 
 #### reusing code from synchronized_lights.py
 #### no need to reinvent the wheel
 
-_CONFIG = cm.CONFIG
-GPIOLEN = len([int(pin) for pin in _CONFIG.get('hardware', 
-                                               'gpio_pins').split(',')])
-_MIN_FREQUENCY = _CONFIG.getfloat('audio_processing', 'min_frequency')
-_MAX_FREQUENCY = _CONFIG.getfloat('audio_processing', 'max_frequency')
+GPIOLEN = cm.hardware.gpio_len 
+_MIN_FREQUENCY = cm.audio_processing.min_frequency
+_MAX_FREQUENCY = cm.audio_processing.max_frequency
 
 try:
-    _CUSTOM_CHANNEL_MAPPING = \
-        [int(channel) for channel in _CONFIG.get('audio_processing',\
-            'custom_channel_mapping').split(',')]
+    _CUSTOM_CHANNEL_MAPPING = cm.audio_processing.custom_channel_mapping
 except:
     _CUSTOM_CHANNEL_MAPPING = 0
 
 try:
-    _CUSTOM_CHANNEL_FREQUENCIES = [int(channel) for channel in
-                                   _CONFIG.get('audio_processing',
-                                               'custom_channel_frequencies').split(',')]
+    _CUSTOM_CHANNEL_FREQUENCIES = cm.audio_processing.custom_channel_frequencies
 except:
     _CUSTOM_CHANNEL_FREQUENCIES = 0
 
@@ -120,6 +120,14 @@ def cache_song(song_filename):
     sample_rate = musicfile.getframerate()
     num_channels = musicfile.getnchannels()
 
+    fft_calc = fft.FFT(CHUNK_SIZE,
+                       sample_rate,
+                       GPIOLEN,
+                       _MIN_FREQUENCY,
+                       _MAX_FREQUENCY,
+                       _CUSTOM_CHANNEL_MAPPING,
+                       _CUSTOM_CHANNEL_FREQUENCIES)
+
     song_filename = os.path.abspath(song_filename)
 
     # create empty array for the cache_matrix
@@ -136,14 +144,10 @@ def cache_song(song_filename):
     # Process audio song_filename
     row = 0
     data = musicfile.readframes(CHUNK_SIZE) # move chunk_size to configuration_manager
-    frequency_limits = calculate_channel_frequency(_MIN_FREQUENCY,
-                                                   _MAX_FREQUENCY,
-                                                   _CUSTOM_CHANNEL_MAPPING,
-                                                   _CUSTOM_CHANNEL_FREQUENCIES)
 
-    while data != '':
+    while data != b'':
         # No cache - Compute FFT in this chunk, and cache results
-        matrix = fft.calculate_levels(data, CHUNK_SIZE, sample_rate, frequency_limits, GPIOLEN)
+        matrix = fft_calc.calculate_levels(data)
 
         # Add the matrix to the end of the cache 
         cache_matrix = np.vstack([cache_matrix, matrix])
@@ -167,16 +171,16 @@ def cache_song(song_filename):
 #### end reuse 
 
 def main():        
-    print "Do you want to generating sync files"
+    print ("Do you want to generate sync files?")
     print 
-    print "This could take a while if you have a lot of songs"
+    print ("This could take a while if you have a lot of songs")
 
-    question = raw_input("Would you like to proceed? (Y to continue) :")
+    question = input("Would you like to proceed? (Y to continue) :")
 
     if not question in ["y", "Y"]:
         sys.exit(0)
 
-    location = raw_input("Enter the path to the folder of songs:")
+    location = input("Enter the path to the folder of songs:")
     location += "/"
 
     sync_list = list()
@@ -192,9 +196,9 @@ def main():
     playlistFile = open(location + "playlist", "w")
 
     for song in sync_list:
-        print "Generating sync file for",song
+        print ("Generating sync file for",song)
         cache_song(song)
-        print "cached"
+        print ("cached")
 
         metadata = mutagen.File(song, easy=True)
         if "title" in metadata:
@@ -207,9 +211,9 @@ def main():
 
     playlistFile.close()
 
-    print "All Finished."
-    print "A playlist was also generated"
-    print location + "playlist"
+    print ("All Finished.")
+    print ("A playlist was also generated")
+    print (location + "playlist")
     sys.path[:] = path
 
 if __name__ == "__main__":
