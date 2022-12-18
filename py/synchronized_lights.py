@@ -81,17 +81,23 @@ import bright_curses
 import mutagen
 from queue import Queue, Empty
 from threading import Thread
-
-import alsaaudio as aa
 import decoder
 import numpy as np
 from numpy import where, clip, round, nan_to_num
+import math
 
 import Platform
 import fft
 from prepostshow import PrePostShow
 import RunningStats
+import socket
 
+# export SYNCHRONIZED_LIGHTS_HOME=/media/taylor/Data/Linux/Github/lightshowpi/
+computer_name = socket.gethostname()
+if computer_name == "G1G2Q13":
+    os.environ['SYNCHRONIZED_LIGHTS_HOME'] = r"C:\Users\tarchibald\github\lightshowpi"
+else:
+    import alsaaudio as aa
 
 # Make sure SYNCHRONIZED_LIGHTS_HOME environment variable is set
 HOME_DIR = os.getenv("SYNCHRONIZED_LIGHTS_HOME")
@@ -167,12 +173,19 @@ class Lightshow(object):
 
         self.output = lambda raw_data: None
 
-        self.mean = np.array([12.0 for _ in range(cm.hardware.gpio_len)], dtype='float32')
-        self.std = np.array([1.5 for _ in range(cm.hardware.gpio_len)], dtype='float32')
+        self.freq_bins = cm.lightshow.freq_bins
+        self.mean = np.array([12.0 for _ in range(self.freq_bins)], dtype='float32')
+        self.std = np.array([1.5 for _ in range(self.freq_bins)], dtype='float32')
 
         self.attenuate_pct = cm.lightshow.attenuate_pct
         self.sd_low = cm.lightshow.SD_low
         self.sd_high = cm.lightshow.SD_high
+
+        self.sds_low = np.array(cm.lightshow.SDs_low) if hasattr(cm.lightshow, "SDs_low") and cm.lightshow.SDs_low else np.ones(self.freq_bins) * self.sd_low
+        self.sds_high = np.array(cm.lightshow.SDs_high) if hasattr(cm.lightshow, "SDs_high") and cm.lightshow.SDs_high else np.ones(self.freq_bins) * self.sd_high
+        self.min_threshold_volume = cm.lightshow.min_threshold_volume
+        self.max_repeat_channels = cm.lightshow.max_repeat_channels
+
 
         self.decay_factor = cm.lightshow.decay_factor
         self.decay = np.zeros(cm.hardware.gpio_len, dtype='float32')
@@ -202,7 +215,7 @@ class Lightshow(object):
         """atexit function"""
         if self.server:
             self.network.set_playing()
-            self.network.broadcast([0. for _ in range(cm.hardware.gpio_len)])
+            self.network.broadcast([0. for _ in range(self.freq_bins)])
             time.sleep(1)
             self.network.unset_playing()
 
@@ -233,18 +246,16 @@ class Lightshow(object):
         frequency response matrix
 
         :param matrix: row of data from cache matrix
-        :type matrix: list
+        :type matrix: numpy 1D array
         """
-        brightness = matrix - self.mean + (self.std * self.sd_low)
-        brightness = (brightness / (self.std * (self.sd_low + self.sd_high))) \
+        brightness = matrix - self.mean + (self.std * self.sds_low)
+        brightness = (brightness / (self.std * (self.sds_low + self.sds_high))) \
             * (1.0 - (self.attenuate_pct / 100.0))
+        # print(brightness)
 
         # FEWER FREQUENCIES
-        if hasattr(hc, "FREQ_BINS") and hc.FREQ_BINS == hc.GPIOLEN / 2:
-            brightness2 = matrix - mean + (std * cm.lightshow.SD_low2)
-            brightness2 = (brightness / (std * (cm.lightshow.SD_low2 + cm.lightshow.SD_high2))) * \
-                          (1.0 - (cm.lightshow.attenuate_pct / 100.0))
-            brightness = np.append(brightness, brightness2)
+        if self.max_repeat_channels > 1:
+            brightness = (brightness.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
 
         # insure that the brightness levels are in the correct range
         brightness = clip(brightness, 0.0, 1.0)
@@ -281,6 +292,7 @@ class Lightshow(object):
             hc.set_light(pin, True, brightness[pin])
 
         if hc.led:
+            # TODO: not compatible with self.freq_bins
             if cm.led.led_channel_configuration == "EXTEND":
                 leds = brightness[self.physical_gpio_len:]
             else:
@@ -455,7 +467,7 @@ class Lightshow(object):
         hc.initialize()
         fft_calc = fft.FFT(self.chunk_size,
                            self.sample_rate,
-                           cm.hardware.gpio_len,
+                           self.freq_bins,
                            cm.audio_processing.min_frequency,
                            cm.audio_processing.max_frequency,
                            cm.audio_processing.custom_channel_mapping,
@@ -508,13 +520,13 @@ class Lightshow(object):
 
                 audio_max2 = audioop.maxpp(data, 2)
                 # print(audio_max, audio_max2)
-                if audio_max2 < 7000 and hasattr(hc, "FREQ_BINS") :
+                if audio_max2 < self.min_threshold_volume:
                     # we will fill the matrix with zeros and turn the lights off
-                    matrix = np.zeros(hc.FREQ_BINS, dtype="float32")
+                    matrix = np.zeros(self.freq_bins, dtype="float32")
                     log.debug("below threshold: '" + str(audio_max2) + "', turning the lights off")
                 elif False and audio_max < 250:
                     # we will fill the matrix with zeros and turn the lights off
-                    matrix = np.zeros(cm.hardware.gpio_len, dtype="float32")
+                    matrix = np.zeros(self.freq_bins, dtype="float32")
                     log.debug("below threshold: '" + str(audio_max) + "', turning the lights off")
                 else:
                     matrix = fft_calc.calculate_levels(data)
@@ -686,7 +698,7 @@ class Lightshow(object):
 
         self.fft_calc = fft.FFT(self.chunk_size,
                                 self.sample_rate,
-                                cm.hardware.gpio_len,
+                                self.freq_bins,
                                 cm.audio_processing.min_frequency,
                                 cm.audio_processing.max_frequency,
                                 cm.audio_processing.custom_channel_mapping,
@@ -711,7 +723,7 @@ class Lightshow(object):
         :raise IOError:
         """
         # create empty array for the cache_matrix
-        self.cache_matrix = np.empty(shape=[0, cm.hardware.gpio_len])
+        self.cache_matrix = np.empty(shape=[0, self.freq_bins])
         self.cache_found = False
 
         # The values 12 and 1.5 are good estimates for first time playing back
@@ -727,7 +739,7 @@ class Lightshow(object):
                 self.cache_found = self.fft_calc.compare_config(self.cache_filename)
                 if not self.cache_found:
                     # create empty array for the cache_matrix
-                    self.cache_matrix = np.empty(shape=[0, cm.hardware.gpio_len])
+                    self.cache_matrix = np.empty(shape=[0, self.freq_bins])
                     raise IOError()
                 else:
                     # load cache from file using numpy loadtxt
@@ -754,10 +766,10 @@ class Lightshow(object):
         Save matrix, std, and mean to cache_filename for use during future playback
         """
         # Compute the standard deviation and mean values for the cache
-        mean = np.empty(cm.hardware.gpio_len, dtype='float32')
-        std = np.empty(cm.hardware.gpio_len, dtype='float32')
+        mean = np.empty(self.freq_bins, dtype='float32')
+        std = np.empty(self.freq_bins, dtype='float32')
 
-        for pin in range(0, cm.hardware.gpio_len):
+        for pin in range(0, self.freq_bins):
             std[pin] = np.std([item for item in self.cache_matrix[:, pin] if item > 0])
             mean[pin] = np.mean([item for item in self.cache_matrix[:, pin] if item > 0])
 

@@ -27,6 +27,7 @@ import json
 import shlex
 import argparse
 from collections import defaultdict
+import math
 
 # The home directory and configuration directory for the application.
 HOME_DIR = os.getenv("SYNCHRONIZED_LIGHTS_HOME")
@@ -509,6 +510,38 @@ class Configuration(object):
         # Standard Deviation
         lghtshw["SD_low"] = self.config.getfloat(ls, 'SD_low')
         lghtshw["SD_high"] = self.config.getfloat(ls, 'SD_high')
+
+        # ADDED BY TAYLOR - put the lightshow verification stuff here
+        # lghtshw["freq_bins"] = self.config.getfloat(ls, 'freq_bins') if         if "min_threshold_volume" is ls:
+        # ADDED BY TAYLOR
+        lghtshw["freq_bins"] = self.config.getfloat(ls,"freq_bins") if "freq_bins" in lghtshw else self.hardware.gpio_len
+        lghtshw["min_threshold_volume"] = self.config.getfloat(ls, 'min_threshold_volume') if "min_threshold_volume" in lghtshw else 7000
+        lghtshw["SD_low2"] = self.config.getfloat(ls, 'SD_low2') if "SD_low2" in lghtshw else None
+        lghtshw["SD_high2"] = self.config.getfloat(ls, 'SD_high2') if "SD_high2" in lghtshw else None
+        lghtshw["SDs_high"] = [float(x) for x in self.config.get(ls, 'SDs_high').split(",")] if "SDs_high" in lghtshw else None
+        lghtshw["SDs_low"] = [float(x) for x in self.config.get(ls, 'SDs_low').split(",")] if "SDs_low" in lghtshw else None
+        lghtshw["max_repeat_channels"] = self.config.getfloat(ls, 'max_repeat_channels') if "max_repeats" in lghtshw else 1
+
+        # If only SD_high2 and SD_low2 are specified
+        # These will be for channels 5,6,7,8 when freq_bins = 4
+        # If freq_bins in [4,5,6,7,8]
+        freq_bins = lghtshw["freq_bins"]
+        if lghtshw["freq_bins"] >= self.hardware.gpio_len / 2:
+            if lghtshw["SD_low2"]:
+                if not lghtshw["SDs_low"]:
+                    lghtshw[freq_bins:] = lghtshw["SD_low2"]
+                else:
+                    logging.error("SDs_low and SD_low2 are both defined.  Please only define one of these.")
+            if lghtshw["SD_high2"]:
+                if not lghtshw["SDs_high"]:
+                    lghtshw["SDs_high"][freq_bins:] = lghtshw["SD_high2"]
+                else:
+                    logging.error("SDs_high and SD_high2 are both defined.  Please only define one of these.")
+
+        print(f"Effective channels: {freq_bins}")
+        print(f"Minimum Volume: {lghtshw['min_threshold_volume']}")
+        print(f"SDs Low: {lghtshw['SDs_low']}")
+        print(f"SDs High: {lghtshw['SDs_high']}")
 
         self.lightshow = Section(lghtshw)
 

@@ -28,8 +28,10 @@ import os.path
 from numpy import *
 import math
 
-from rpi_audio_levels import AudioLevels
-
+try:
+    from rpi_audio_levels import AudioLevels
+except:
+    pass
 
 class FFT(object):
     def __init__(self,

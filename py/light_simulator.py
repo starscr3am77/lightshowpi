@@ -39,10 +39,15 @@ Note:
 """
 
 from math import ceil
-import Tkinter
 import numpy as np
 import hardware_controller as hc
-from Tkinter import Canvas
+try:
+    import Tkinter
+    from Tkinter import Canvas
+except:
+    import tkinter
+    from tkinter import Canvas
+
 import math
 
 CM = hc.cm
@@ -222,7 +227,7 @@ class Gui(Canvas):
                                                     int(ceil(brightness * 2.55)))
             try:
                 item = self.gpio[pin]
-                print item, level, brightness, int(ceil(brightness * 2.55))
+                print(item, level, brightness, int(ceil(brightness * 2.55)))
                 self.itemconfig(item, fill=level)
                 self.parent.update()
             except:
