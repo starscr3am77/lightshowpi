@@ -394,3 +394,421 @@ INFO:root:Sent command to turn off system
 INFO:root.relay:b'Sent command: i_off'
 INFO:root:Starting relay...
 INFO:root:Connected to Broadlink using LAN
+2022-12-15 22:32:44 - root - INFO - Connected to local relay server
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-15 22:32:44 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+192.168.187.135 - - [15/Dec/2022 22:32:40] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [15/Dec/2022 22:32:40] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [15/Dec/2022 22:32:41] "GET /css/style.css HTTP/1.1" 304 -
+192.168.187.135 - - [15/Dec/2022 22:32:43] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 47384) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 47384) has disconnected
+2022-12-15 22:32:49 - root - INFO - Connected to local relay server
+INFO:root:Connected to local relay server
+192.168.187.135 - - [15/Dec/2022 22:32:48] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-15 22:32:49 - root - INFO - Sent command to turn on speakers
+INFO:root:Sent command to turn on speakers
+INFO:root.relay:('127.0.0.1', 47388) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 47388) has disconnected
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and "FREQ_BINS" in hc:
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1058, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 511, in audio_in
+    if audio_max2 < 7000 and hasattr(hc, "FREQ_BINS") :
+TypeError: argument of type 'Hardware' is not iterable
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+2022-12-15 22:47:01 - root - INFO - Turned off lights
+INFO:root:Turned off lights
+2022-12-15 22:48:19 - root - INFO - Connected to local relay server
+192.168.187.135 - - [15/Dec/2022 22:36:20] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [15/Dec/2022 22:36:58] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('192.168.187.135', 60776)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 580, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 376, in handle
+    self.handle_one_request()
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 344, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+192.168.187.135 - - [15/Dec/2022 22:39:55] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('192.168.187.135', 60800)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 580, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 376, in handle
+    self.handle_one_request()
+  File "/home/pi/lightshow2022/web/microweb/CGIHTTPServer_root.py", line 344, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+192.168.187.135 - - [15/Dec/2022 22:45:18] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [15/Dec/2022 22:46:53] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [15/Dec/2022 22:48:18] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+INFO:root.relay:('127.0.0.1', 47556) has connected
+2022-12-15 22:48:19 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 47556) has disconnected
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+2022-12-15 23:07:17 - root - INFO - Turned off lights
+INFO:root:Turned off lights
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+2022-12-16 22:30:21 - root - INFO - Connected to local relay server
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-16 22:30:21 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+192.168.187.135 - - [16/Dec/2022 22:30:18] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [16/Dec/2022 22:30:18] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [16/Dec/2022 22:30:19] "GET /css/style.css HTTP/1.1" 304 -
+192.168.187.135 - - [16/Dec/2022 22:30:20] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 55060) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 55060) has disconnected
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+2022-12-17 00:47:10 - root - INFO - Turned off lights
+INFO:root:Turned off lights
+2022-12-17 09:26:41 - root - INFO - Connected to local relay server
+192.168.187.135 - - [17/Dec/2022 00:47:03] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [17/Dec/2022 09:26:35] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [17/Dec/2022 09:26:35] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [17/Dec/2022 09:26:36] "GET /favicon.png HTTP/1.1" 304 -
+192.168.187.135 - - [17/Dec/2022 09:26:36] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [17/Dec/2022 09:26:36] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [17/Dec/2022 09:26:40] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-17 09:26:41 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:('127.0.0.1', 45490) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 45490) has disconnected
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+2022-12-17 17:23:33 - root - INFO - Turned off lights
+INFO:root:Turned off lights
+2022-12-17 17:23:39 - root - INFO - Turned on lights
+INFO:root:Turned on lights
+2022-12-17 17:23:46 - root - INFO - Turned on lights
+INFO:root:Turned on lights
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+2022-12-18 12:42:07 - root - INFO - Connected to local relay server
+INFO:root:Connected to local relay server
+192.168.187.135 - - [18/Dec/2022 12:42:03] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [18/Dec/2022 12:42:04] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [18/Dec/2022 12:42:05] "GET /css/style.css HTTP/1.1" 304 -
+192.168.187.135 - - [18/Dec/2022 12:42:06] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-18 12:42:07 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:('127.0.0.1', 39572) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 39572) has disconnected
