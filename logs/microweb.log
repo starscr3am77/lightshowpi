@@ -812,3 +812,5 @@ INFO:root:Sent command to turn on speakers (part of Start)
 INFO:root.relay:('127.0.0.1', 39572) has connected
 INFO:root.relay:b'i_on|'
 INFO:root.relay:('127.0.0.1', 39572) has disconnected
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
