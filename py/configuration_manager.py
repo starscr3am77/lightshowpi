@@ -514,8 +514,9 @@ class Configuration(object):
         # ADDED BY TAYLOR - put the lightshow verification stuff here
         # lghtshw["freq_bins"] = self.config.getfloat(ls, 'freq_bins') if         if "min_threshold_volume" is ls:
         # ADDED BY TAYLOR
-        lghtshw["freq_bins"] = self.config.getfloat(ls,"freq_bins") if "freq_bins" in lghtshw else self.hardware.gpio_len
-        lghtshw["min_threshold_volume"] = self.config.getfloat(ls, 'min_threshold_volume') if "min_threshold_volume" in lghtshw else 7000
+        print(self.config)
+        lghtshw["freq_bins"] = self.config.getfloat(ls,"freq_bins") if "freq_bins" in self.config else self.hardware.gpio_len
+        lghtshw["min_threshold_volume"] = self.config.getfloat(ls, 'min_threshold_volume') if "min_threshold_volume" in lghtshw else 5000
         lghtshw["SD_low2"] = self.config.getfloat(ls, 'SD_low2') if "SD_low2" in lghtshw else None
         lghtshw["SD_high2"] = self.config.getfloat(ls, 'SD_high2') if "SD_high2" in lghtshw else None
         lghtshw["SDs_high"] = [float(x) for x in self.config.get(ls, 'SDs_high').split(",")] if "SDs_high" in lghtshw else None
