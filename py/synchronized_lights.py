@@ -265,17 +265,28 @@ class Lightshow(object):
         """
         # FEWER FREQUENCIES
         if self.max_repeat_channels > 1:
-            matrix = (matrix.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
-            mean = (self.mean.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
-            std = (self.std.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
+            matrix = (np.tile(matrix,self.max_repeat_channels))[:cm.hardware.gpio_len]
+            mean = (np.tile(self.mean,self.max_repeat_channels))[:cm.hardware.gpio_len]
+            std = (np.tile(self.std,self.max_repeat_channels))[:cm.hardware.gpio_len]
         else:
             mean = self.mean
             std = self.std
 
+        ### If you want negative SD_low numbers to mean "play at volumes below the mean"
+        # brightness = (( (matrix - mean) / (std) ) - self.sds_low ) / abs(self.sds_high - self.sds_low + 1e-3)
+
+        ### The default way is to express SD_low as a positive number
+        # brightness = (( (matrix - mean) / (std) ) + self.sds_low ) / (self.sds_high + self.sds_low + 1e-3)
+
         brightness = matrix - mean + (std * self.sds_low)
-        brightness = (brightness / (std * (self.sds_low + self.sds_high))) \
+        brightness = (brightness / (std * (self.sds_low + self.sds_high + 1e-3))) \
             * (1.0 - (self.attenuate_pct / 100.0))
-        # print(brightness)
+
+        # print("val",matrix)
+        # print("mean", mean)
+        # print("std", std)
+        # print("bright", brightness)
+        # print("___________")
 
         # insure that the brightness levels are in the correct range
         brightness = clip(brightness, 0.0, 1.0)
