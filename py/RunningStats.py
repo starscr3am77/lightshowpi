@@ -81,7 +81,7 @@ class Stats(object):
         if self.sample_count == 1:
             self.old_mean = self.new_mean
             self.new_mean = data
-            self.old_std = zeros(length, dtype='float32')
+            self.old_std = zeros(self.length, dtype='float32')
         else:
             self.new_mean = self.old_mean + (data - self.old_mean) / self.sample_count
             self.new_std = self.old_std + (data - self.old_mean) * (data - self.new_mean)
@@ -115,7 +115,7 @@ class Stats(object):
         if self.sample_count > 1:
             return self.new_std / (self.sample_count - 1.0)
         else:
-            return zeros(length, dtype='float32')
+            return zeros(self.length, dtype='float32')
 
     def std(self):
         """Get the current standard deviation 

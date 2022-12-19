@@ -181,10 +181,25 @@ class Lightshow(object):
         self.sd_low = cm.lightshow.SD_low
         self.sd_high = cm.lightshow.SD_high
 
-        self.sds_low = np.array(cm.lightshow.SDs_low) if hasattr(cm.lightshow, "SDs_low") and cm.lightshow.SDs_low else np.ones(self.freq_bins) * self.sd_low
-        self.sds_high = np.array(cm.lightshow.SDs_high) if hasattr(cm.lightshow, "SDs_high") and cm.lightshow.SDs_high else np.ones(self.freq_bins) * self.sd_high
+        self.sds_low = np.array(cm.lightshow.SDs_low) if hasattr(cm.lightshow, "SDs_low") and cm.lightshow.SDs_low else np.ones(cm.hardware.gpio_len) * self.sd_low
+        self.sds_high = np.array(cm.lightshow.SDs_high) if hasattr(cm.lightshow, "SDs_high") and cm.lightshow.SDs_high else np.ones(cm.hardware.gpio_len) * self.sd_high
+
+        if cm.lightshow.freq_bins >= cm.hardware.gpio_len / 2:
+            if cm.lightshow.SD_low2:
+                if not cm.lightshow.SDs_low:
+                    self.sds_low[self.freq_bins:] = cm.lightshow.SD_low2
+                else:
+                    log.error("SDs_low and SD_low2 are both defined.  Please only define one of these.")
+            if cm.lightshow.SD_high2:
+                if not cm.lightshow.SDs_high:
+                    self.sds_high[self.freq_bins:] = cm.lightshow.SD_high2
+                else:
+                    log.error("SDs_high and SD_high2 are both defined.  Please only define one of these.")
+
         self.min_threshold_volume = cm.lightshow.min_threshold_volume
         self.max_repeat_channels = cm.lightshow.max_repeat_channels
+        print(f"SDs Low: {self.sds_low}")
+        print(f"SDs High: {self.sds_high}")
 
 
         self.decay_factor = cm.lightshow.decay_factor
@@ -248,14 +263,19 @@ class Lightshow(object):
         :param matrix: row of data from cache matrix
         :type matrix: numpy 1D array
         """
-        brightness = matrix - self.mean + (self.std * self.sds_low)
-        brightness = (brightness / (self.std * (self.sds_low + self.sds_high))) \
-            * (1.0 - (self.attenuate_pct / 100.0))
-        # print(brightness)
-
         # FEWER FREQUENCIES
         if self.max_repeat_channels > 1:
-            brightness = (brightness.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
+            matrix = (matrix.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
+            mean = (self.mean.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
+            std = (self.std.repeat(self.max_repeat_channels))[:cm.hardware.gpio_len]
+        else:
+            mean = self.mean
+            std = self.std
+
+        brightness = matrix - mean + (std * self.sds_low)
+        brightness = (brightness / (std * (self.sds_low + self.sds_high))) \
+            * (1.0 - (self.attenuate_pct / 100.0))
+        # print(brightness)
 
         # insure that the brightness levels are in the correct range
         brightness = clip(brightness, 0.0, 1.0)
@@ -461,7 +481,7 @@ class Lightshow(object):
         # preload running_stats to avoid errors, and give us a show that looks
         # good right from the start
         count = 2
-        running_stats = RunningStats.Stats(cm.hardware.gpio_len)
+        running_stats = RunningStats.Stats(self.freq_bins)
         running_stats.preload(self.mean, self.std, count)
 
         hc.initialize()

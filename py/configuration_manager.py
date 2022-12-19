@@ -514,35 +514,35 @@ class Configuration(object):
         # ADDED BY TAYLOR - put the lightshow verification stuff here
         # lghtshw["freq_bins"] = self.config.getfloat(ls, 'freq_bins') if         if "min_threshold_volume" is ls:
         # ADDED BY TAYLOR
-        print(self.config)
-        lghtshw["freq_bins"] = self.config.getfloat(ls,"freq_bins") if "freq_bins" in self.config else self.hardware.gpio_len
-        lghtshw["min_threshold_volume"] = self.config.getfloat(ls, 'min_threshold_volume') if "min_threshold_volume" in lghtshw else 5000
-        lghtshw["SD_low2"] = self.config.getfloat(ls, 'SD_low2') if "SD_low2" in lghtshw else None
-        lghtshw["SD_high2"] = self.config.getfloat(ls, 'SD_high2') if "SD_high2" in lghtshw else None
-        lghtshw["SDs_high"] = [float(x) for x in self.config.get(ls, 'SDs_high').split(",")] if "SDs_high" in lghtshw else None
-        lghtshw["SDs_low"] = [float(x) for x in self.config.get(ls, 'SDs_low').split(",")] if "SDs_low" in lghtshw else None
-        lghtshw["max_repeat_channels"] = self.config.getfloat(ls, 'max_repeat_channels') if "max_repeats" in lghtshw else 1
+
+        lghtshw["freq_bins"] = self.config.getint(ls,'freq_bins') if self.config.has_option(ls,"freq_bins") else self.hardware.gpio_len
+        freq_bins = lghtshw["freq_bins"]
+        lghtshw["max_repeat_channels"] = math.ceil(self.hardware.gpio_len / freq_bins)
+        lghtshw["min_threshold_volume"] = self.config.getint(ls, 'min_threshold_volume') if self.config.has_option(ls,"min_threshold_volume") else 5000
+        lghtshw["SD_low2"] = self.config.getfloat(ls, 'SD_low2') if self.config.has_option(ls,"SD_low2") else None
+        lghtshw["SD_high2"] = self.config.getfloat(ls, 'SD_high2') if self.config.has_option(ls,"SD_high2") else None
+        lghtshw["SDs_high"] = [float(x) for x in self.config.get(ls, 'SDs_high').split(",")] if self.config.has_option(ls,"SDs_high") else None
+        lghtshw["SDs_low"] = [float(x) for x in self.config.get(ls, 'SDs_low').split(",")] if self.config.has_option(ls,"SDs_low") else None
 
         # If only SD_high2 and SD_low2 are specified
         # These will be for channels 5,6,7,8 when freq_bins = 4
         # If freq_bins in [4,5,6,7,8]
-        freq_bins = lghtshw["freq_bins"]
-        if lghtshw["freq_bins"] >= self.hardware.gpio_len / 2:
-            if lghtshw["SD_low2"]:
-                if not lghtshw["SDs_low"]:
-                    lghtshw[freq_bins:] = lghtshw["SD_low2"]
-                else:
-                    logging.error("SDs_low and SD_low2 are both defined.  Please only define one of these.")
-            if lghtshw["SD_high2"]:
-                if not lghtshw["SDs_high"]:
-                    lghtshw["SDs_high"][freq_bins:] = lghtshw["SD_high2"]
-                else:
-                    logging.error("SDs_high and SD_high2 are both defined.  Please only define one of these.")
+
+        # if lghtshw["freq_bins"] >= self.hardware.gpio_len / 2:
+        #     if lghtshw["SD_low2"]:
+        #         if not lghtshw["SDs_low"]:
+        #             lghtshw["SDs_low"][freq_bins:] = lghtshw["SD_low2"]
+        #         else:
+        #             logging.error("SDs_low and SD_low2 are both defined.  Please only define one of these.")
+        #     if lghtshw["SD_high2"]:
+        #         if not lghtshw["SDs_high"]:
+        #             lghtshw["SDs_high"][freq_bins:] = lghtshw["SD_high2"]
+        #         else:
+        #             logging.error("SDs_high and SD_high2 are both defined.  Please only define one of these.")
 
         print(f"Effective channels: {freq_bins}")
         print(f"Minimum Volume: {lghtshw['min_threshold_volume']}")
-        print(f"SDs Low: {lghtshw['SDs_low']}")
-        print(f"SDs High: {lghtshw['SDs_high']}")
+        print(f"Max Repeat Channels: {lghtshw['max_repeat_channels']}")
 
         self.lightshow = Section(lghtshw)
 
