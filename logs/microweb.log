@@ -814,3 +814,66 @@ INFO:root.relay:b'i_on|'
 INFO:root.relay:('127.0.0.1', 39572) has disconnected
 INFO:root:Starting relay...
 INFO:root:Connected to Broadlink using LAN
+2022-12-19 07:38:49 - root - INFO - Turned on lights
+INFO:root:Turned on lights
+192.168.187.56 - - [19/Dec/2022 06:31:16] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.56 - - [19/Dec/2022 07:38:42] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2022 08:05:08] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [19/Dec/2022 08:05:08] "GET /favicon.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2022 08:05:08] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2022 08:05:09] "GET /css/style.css HTTP/1.1" 200 -
+192.168.187.135 - - [19/Dec/2022 22:24:19] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [19/Dec/2022 22:24:19] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [19/Dec/2022 22:24:20] "GET /css/style.css HTTP/1.1" 304 -
+192.168.187.135 - - [19/Dec/2022 22:24:28] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+2022-12-19 22:24:29 - root - INFO - Connected to local relay server
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-19 22:24:29 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root.relay:('127.0.0.1', 55426) has connected
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 55426) has disconnected
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+2022-12-19 22:25:05 - root - INFO - Turned on lights
+INFO:root:Turned on lights
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+2022-12-20 16:59:38 - root - INFO - Connected to local relay server
+192.168.187.135 - - [20/Dec/2022 16:59:35] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [20/Dec/2022 16:59:37] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-20 16:59:38 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:('127.0.0.1', 43942) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 43942) has disconnected
+Traceback (most recent call last):
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 1101, in <module>
+    lightshow.audio_in()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 537, in audio_in
+    data = stream_reader()
+  File "/home/pi/lightshow2022/py/synchronized_lights.py", line 444, in <lambda>
+    stream_reader = lambda: self.streaming.read()[-1]
+alsaaudio.ALSAAudioError: Input/output error [default:CARD=MIC]
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+2022-12-20 18:12:36 - root - INFO - Connected to local relay server
+192.168.187.135 - - [20/Dec/2022 18:12:33] "GET / HTTP/1.1" 304 -
+192.168.187.135 - - [20/Dec/2022 18:12:33] "GET /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+192.168.187.135 - - [20/Dec/2022 18:12:35] "GET /css/style.css HTTP/1.1" 304 -
+192.168.187.135 - - [20/Dec/2022 18:12:36] "POST /cgi-bin/web_controls.cgi HTTP/1.1" 200 -
+INFO:root.relay:Got message
+INFO:root:Connected to local relay server
+INFO:root:[send_commands.py] - Sending i_on
+2022-12-20 18:12:36 - root - INFO - Sent command to turn on speakers (part of Start)
+INFO:root:Sent command to turn on speakers (part of Start)
+INFO:root.relay:('127.0.0.1', 47442) has connected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 47442) has disconnected
