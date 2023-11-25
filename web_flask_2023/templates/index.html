@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LightShowPi Web Controls</title>
+    <meta name="description" content="A very basic web interface for LightShowPi">
+    <meta name="author" content="Ken B">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="196x196" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS and its dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+    {% with messages = get_flashed_messages(category_filter=["success"]) %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="toast" style="position: absolute; top: 20px; right: 20px;">
+            <div class="toast-header">
+              <strong class="mr-auto">Notification</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              {{ message }}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+
+    <center>
+        <h1>LightShowPi Web Controls</h1>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="On"/>
+            <input id="on" type="submit" value="Lights ON">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="Off"/>
+            <input id="off" type="submit" value="Lights OFF">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="Start"/>
+            <input id="next" type="submit" value="Start">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="Speakers On"/>
+            <input id="speakers_on" type="submit" value="Speakers ON">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="Speakers Off"/>
+            <input id="speakers_off" type="submit" value="Speakers OFF">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="System Off"/>
+            <input id="system_off" type="submit" value="OFF">
+        </form>
+
+        <form method="post" action="/lightshowpi">
+            <input type="hidden" name="message" value="Restart Server"/>
+            <input id="restart" type="submit" value="Restart Server">
+        </form>
+
+        {% if message %}
+            <h2>Executed command: {{ message }}</h2>
+        {% endif %}
+    </center>
+</body>
+</html>
+
+
+<script>
+$(document).ready(function(){
+    $('.toast').toast({delay: 3000});
+    $('.toast').toast('show');
+});
+</script>
+

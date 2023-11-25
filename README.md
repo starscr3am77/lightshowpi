@@ -1,3 +1,15 @@
+# NOTES FOR TAYLOR
+
+11.25.2023
+* I'm using web_flask_2023
+* I don't think I need any of the other web stuffs
+* On pi3, I have apache pointing here @ taylorarchibald.com/lightshowpi
+* Also on pi2, I have apache :80 pointing here (192.168.187.99:8283)
+* Just plug in the USB microphone
+* To adjust settings, go to /home/pi/lightshow2022/config/overrides.cfg
+* Lots of these settings are handled here: py/synchronized_lights.py
+
+
 [http://lightshowpi.org/](http://lightshowpi.org/)
 
 All files here are free to use under the BSD License (see the LICENSE file for details).  All we
