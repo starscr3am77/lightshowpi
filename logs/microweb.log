@@ -6789,3 +6789,42 @@ INFO:root.relay:('127.0.0.1', 39440) has connected
 INFO:root.relay:('127.0.0.1', 39440) has disconnected
 INFO:root:Starting relay...
 INFO:root:Using remote WAN address for Broadlink
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 45908) has connected
+INFO:root.relay:('127.0.0.1', 45908) has disconnected
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 39476) has connected
+INFO:root.relay:('127.0.0.1', 39476) has disconnected
+INFO:root:Starting relay...
+INFO:root:Connected to Broadlink using LAN
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33444) has connected
+INFO:root.relay:('127.0.0.1', 33444) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33734) has connected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33738) has connected
+INFO:root.relay:('127.0.0.1', 33734) has disconnected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 33738) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33764) has connected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33768) has connected
+INFO:root.relay:('127.0.0.1', 33764) has disconnected
+INFO:root.relay:b'i_on|'
+INFO:root.relay:('127.0.0.1', 33768) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 33896) has connected
+INFO:root.relay:('127.0.0.1', 33896) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 34026) has connected
+INFO:root.relay:('127.0.0.1', 34026) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 34040) has connected
+INFO:root.relay:('127.0.0.1', 34040) has disconnected
+INFO:root.relay:Got message
+INFO:root.relay:('127.0.0.1', 34056) has connected
+INFO:root.relay:('127.0.0.1', 34056) has disconnected

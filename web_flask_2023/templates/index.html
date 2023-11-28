@@ -12,84 +12,97 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
 
-<!-- Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap JS and its dependencies -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
     {% with messages = get_flashed_messages(category_filter=["success"]) %}
-      {% if messages %}
-        {% for message in messages %}
-          <div class="toast" style="position: absolute; top: 20px; right: 20px;">
-            <div class="toast-header">
-              <strong class="mr-auto">Notification</strong>
-              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-            </div>
-            <div class="toast-body">
-              {{ message }}
-            </div>
-          </div>
-        {% endfor %}
-      {% endif %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="toast" style="position: absolute; top: 20px; right: 20px;">
+                    <div class="toast-header">
+                        <strong class="mr-auto">Notification</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                    </div>
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
     {% endwith %}
 
+    <div class="container">
+        <h1 class="text-center my-4">LightShowPi Web Controls</h1>
 
-    <center>
-        <h1>LightShowPi Web Controls</h1>
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 col-sm-6 text-center">
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="On"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="on" type="submit" value="Lights ON">
+                </form>
 
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="On"/>
-            <input id="on" type="submit" value="Lights ON">
-        </form>
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="Off"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="off" type="submit" value="Lights OFF">
+                </form>
 
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="Off"/>
-            <input id="off" type="submit" value="Lights OFF">
-        </form>
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="Start"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="next" type="submit" value="Start Lightshow">
+                </form>
 
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="Start"/>
-            <input id="next" type="submit" value="Start">
-        </form>
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="Speakers On"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="speakers_on" type="submit" value="Speakers ON">
+                </form>
 
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="Speakers On"/>
-            <input id="speakers_on" type="submit" value="Speakers ON">
-        </form>
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="Speakers Off"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="speakers_off" type="submit" value="Speakers OFF">
+                </form>
 
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="Speakers Off"/>
-            <input id="speakers_off" type="submit" value="Speakers OFF">
-        </form>
-
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="System Off"/>
-            <input id="system_off" type="submit" value="OFF">
-        </form>
-
-        <form method="post" action="/lightshowpi">
-            <input type="hidden" name="message" value="Restart Server"/>
-            <input id="restart" type="submit" value="Restart Server">
-        </form>
+                <form method="post" action="/lightshowpi">
+                    <input type="hidden" name="message" value="System Off"/>
+                    <input class="btn btn-secondary btn-lg btn-block mb-2" id="system_off" type="submit" value="ALL OFF">
+                </form>
+            </div>
+        </div>
 
         {% if message %}
-            <h2>Executed command: {{ message }}</h2>
+            <h2 class="text-center">Executed command: {{ message }}</h2>
         {% endif %}
-    </center>
+
+
+    <div style="margin-top: 50px;">
+        <h2>Control with Google Assistant</h2>
+        <p>Use the following voice commands with Google Assistant to control your LightShowPi:</p>
+        <ul>
+            <li><strong>"Activate Christmas tree"</strong> - Turns on the lights.</li>
+            <li><strong>"Activate Christmas tree off"</strong> - Turns off the lights.</li>
+            <li><strong>"Activate light show"</strong> - Enables microphone-controlled power levels.</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h2>Webhook Integration</h2>
+        <p>To integrate with other services, use the following webhook:</p>
+        <a href="https://taylorarchibald.com/lightshowpi">https://taylorarchibald.com/lightshowpi</a>
+        <p>Send data as <code>application/x-www-form-urlencoded</code> with the key <code>message=Start</code> where Start is your command.</p>
+    </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.toast').toast({delay: 3000});
+            $('.toast').toast('show');
+        });
+    </script>
 </body>
 </html>
-
-
-<script>
-$(document).ready(function(){
-    $('.toast').toast({delay: 3000});
-    $('.toast').toast('show');
-});
-</script>
 
