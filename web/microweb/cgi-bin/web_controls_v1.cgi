@@ -95,7 +95,7 @@ print("""
                 <input type="hidden" name="message" value="On"/>
                 <input id="on" type="submit" value="Lights ON">
             </form>
-
+            
             <form method="post" action="web_controls.cgi">
                 <input type="hidden" name="message" value="Off"/>
                 <input id="off" type="submit" value="Lights OFF">
@@ -103,24 +103,16 @@ print("""
 
 """)
 
-def run_background_command(cmd):
-    """Run a command in background while preserving environment"""
-    # Use nohup to keep process running after parent exits
-    # Redirect output to /dev/null since we don't need it
-    #full_cmd = f"nohup {cmd} > /dev/null 2>&1 &"
-    full_cmd = f"{cmd}"
-    os.system(full_cmd)
-
 if message:
     if message == "On":
-        run_background_command('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
-        run_background_command('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
-        run_background_command("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=on")
+        os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        os.system("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=on")
         logger.info("Turned on lights")
     if message == "Off":
-        run_background_command('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
-        run_background_command('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
-        run_background_command("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=off")
+        os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        os.system("python ${SYNCHRONIZED_LIGHTS_HOME}/py/hardware_controller.py --state=off")
         logger.info("Turned off lights")
     if message == "Next":
         os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
@@ -158,10 +150,10 @@ if message:
         if connection:
             send_commands.send_command_server(connection, "Speakers", "on", confirm=False)
             logger.info("Sent command to turn on speakers (part of Start)")
-        run_background_command('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
-        run_background_command('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
-        run_background_command("${SYNCHRONIZED_LIGHTS_HOME}/bin/play_sms")
-        run_background_command("${SYNCHRONIZED_LIGHTS_HOME}/bin/check_sms")
+        os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
+        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
+        os.system("${SYNCHRONIZED_LIGHTS_HOME}/bin/play_sms &")
+        os.system("${SYNCHRONIZED_LIGHTS_HOME}/bin/check_sms &")
         sleep(.1)
 
     if message == "Restart Server":
@@ -237,3 +229,4 @@ if Path(log).exists():
     print("<br>".join(tail(log,15)).replace(' ', '&nbsp;'))
     print('</p>')
 print("</body></html>")
+

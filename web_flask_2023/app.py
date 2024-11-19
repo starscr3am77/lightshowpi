@@ -9,7 +9,6 @@ from subprocess import Popen
 
 app = Flask(__name__)
 
-
 app.secret_key = 'DSAREYUIY%$#$%^TREWSRYU876543'
 
 # Configure Logger
@@ -23,6 +22,10 @@ logger.addHandler(handler)
 # Set environment variables
 HOME = os.environ.get('SYNCHRONIZED_LIGHTS_HOME', '/home/pi/lightshow2022')
 BROADLINK = os.environ.get('BROADLINK', '/home/pi/Projects/broadlink')
+ON_OFF_SCRIPT=f"{HOME}/py/hardware_controller.py"
+ON_OFF_SCRIPT=f"{HOME}/py/on_or_off.py"
+ENV = os.environ.copy()
+ENV['SYNCHRONIZED_LIGHTS_HOME'] = HOME  # Ensure this env var is set
 
 # Importing send_commands module (Adjust the path as per your environment)
 sys.path.append(BROADLINK)
@@ -57,17 +60,15 @@ def index():
 
 def execute_command(command):
     connection = connect()
-    env = os.environ.copy()
-    env['SYNCHRONIZED_LIGHTS_HOME'] = HOME  # Ensure this env var is set
 
     if command == "On":
         kill_processes()
-        Popen([sys.executable, f"{HOME}/py/hardware_controller.py", "--state=on"], 
-              env=env, cwd=HOME)
+        Popen([sys.executable, ON_OFF_SCRIPT, "--state=on"],
+              env=ENV, cwd=HOME)
     elif command == "Off":
         kill_processes()
-        Popen([sys.executable, f"{HOME}/py/hardware_controller.py", "--state=off"], 
-              env=env, cwd=HOME)
+        Popen([sys.executable, ON_OFF_SCRIPT, "--state=off"],
+              env=ENV, cwd=HOME)
     elif command == "Next":
         kill_processes()
         sleep(1)
@@ -86,24 +87,22 @@ def execute_command(command):
         if connection:
             send_commands.send_command_server(connection, "Speakers", "on", confirm=False)
             logger.info("Sent command to turn on speakers (part of Start)")
-        
+
         # Kill existing processes
         kill_processes()
-        
+
         # Start new processes in background with full path expansion
-        Popen(['/bin/bash', f"{HOME}/bin/play_sms"], env=env, cwd=HOME)
-        Popen(['/bin/bash', f"{HOME}/bin/check_sms"], env=env, cwd=HOME)
+        Popen(['/bin/bash', f"{HOME}/bin/play_sms"], env=ENV, cwd=HOME)
+        Popen(['/bin/bash', f"{HOME}/bin/check_sms"], env=ENV, cwd=HOME)
 
 def kill_processes():
-    # Use explicit paths in pkill commands
     try:
-        # Kill bash processes without waiting
-        Popen(['pkill', '-f', f'bash.*{HOME}/bin'])
-        # Kill python processes without waiting
-        Popen(['pkill', '-f', f'python.*{HOME}/py'])
+        # Use sudo to kill processes. Requires passwordless sudo for these specific commands
+        Popen(['sudo', 'pkill', '-f', f'bash.*{HOME}/bin'], env=ENV, cwd=HOME)
+        Popen(['sudo', 'pkill', '-f', f'python.*{HOME}/py'], env=ENV, cwd=HOME)
         sleep(0.5)  # Give processes time to clean up
     except Exception as e:
-        logger.warning(f"Error during kill process: {e}")
+        logger.error(f"Error during kill process: {e}")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8284)
+    app.run(host='0.0.0.0', port=8283)
