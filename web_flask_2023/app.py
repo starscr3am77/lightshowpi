@@ -57,12 +57,17 @@ def index():
 
 def execute_command(command):
     connection = connect()
+    env = os.environ.copy()
+    env['SYNCHRONIZED_LIGHTS_HOME'] = HOME  # Ensure this env var is set
+
     if command == "On":
         kill_processes()
-        os.system(f"python {HOME}/py/hardware_controller.py --state=on")
+        Popen([sys.executable, f"{HOME}/py/hardware_controller.py", "--state=on"], 
+              env=env, cwd=HOME)
     elif command == "Off":
         kill_processes()
-        os.system(f"python {HOME}/py/hardware_controller.py --state=off")
+        Popen([sys.executable, f"{HOME}/py/hardware_controller.py", "--state=off"], 
+              env=env, cwd=HOME)
     elif command == "Next":
         kill_processes()
         sleep(1)
@@ -77,22 +82,28 @@ def execute_command(command):
             send_commands.send_command_server(connection, "Speakers", "off", confirm=False)
         kill_processes()
     elif command == "Start":
-        #kill_processes()
-        #os.system(f"{HOME}/bin/play_sms &")
-        #os.system(f"{HOME}/bin/check_sms &")
         connection = connect()
         if connection:
             send_commands.send_command_server(connection, "Speakers", "on", confirm=False)
             logger.info("Sent command to turn on speakers (part of Start)")
-        os.system('pkill -f "bash $SYNCHRONIZED_LIGHTS_HOME/bin"')
-        os.system('pkill -f "python $SYNCHRONIZED_LIGHTS_HOME/py"')
-        os.system("${SYNCHRONIZED_LIGHTS_HOME}/bin/play_sms &")
-        os.system("${SYNCHRONIZED_LIGHTS_HOME}/bin/check_sms &")
+        
+        # Kill existing processes
+        kill_processes()
+        
+        # Start new processes in background with full path expansion
+        Popen(['/bin/bash', f"{HOME}/bin/play_sms"], env=env, cwd=HOME)
+        Popen(['/bin/bash', f"{HOME}/bin/check_sms"], env=env, cwd=HOME)
 
 def kill_processes():
-    os.system(f'pkill -f "bash {HOME}/bin"')
-    os.system(f'pkill -f "python {HOME}/py"')
+    # Use explicit paths in pkill commands
+    try:
+        # Kill bash processes without waiting
+        Popen(['pkill', '-f', f'bash.*{HOME}/bin'])
+        # Kill python processes without waiting
+        Popen(['pkill', '-f', f'python.*{HOME}/py'])
+        sleep(0.5)  # Give processes time to clean up
+    except Exception as e:
+        logger.warning(f"Error during kill process: {e}")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8283)
-
+    app.run(host='0.0.0.0', port=8284)
