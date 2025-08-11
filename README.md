@@ -1,153 +1,187 @@
-# NOTES FOR TAYLOR
+# LightShowPi - Audio-Synchronized Light Show System
 
-11.25.2023
-* I'm using web_flask_2023
-* I don't think I need any of the other web stuffs
-* On pi3, I have apache pointing here @ taylorarchibald.com/lightshowpi
-* Also on pi2, I have apache :80 pointing here (192.168.187.99:8283)
-* Just plug in the USB microphone
-* To adjust settings, go to /home/pi/lightshow2022/config/overrides.cfg
-* Lots of these settings are handled here: py/synchronized_lights.py
+LightShowPi is a comprehensive Raspberry Pi-based system that synchronizes lights to music by analyzing audio frequencies and controlling GPIO pins or LED strips. This system transforms any space into a synchronized light show, perfect for parties, events, or home automation projects.
 
+## How It Works
 
-[http://lightshowpi.org/](http://lightshowpi.org/)
+### Core Architecture
 
-All files here are free to use under the BSD License (see the LICENSE file for details).  All we
-ask in return is that you send any updates / improvements you may make to them back to us so 
-that we can all benefit from your improvements!
+1. **Audio Analysis Engine**
+   - Uses **FFT (Fast Fourier Transform)** to analyze audio frequency content in real-time
+   - Breaks down audio into frequency bands (typically 8-24 channels)
+   - Each frequency band corresponds to a light channel
+   - Supports various audio formats: MP3, WAV, OGG, and streaming sources
 
-Join us on our [Reddit page](https://www.reddit.com/r/LightShowPi/) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
+2. **Hardware Control**
+   - **GPIO Control**: Direct control of Raspberry Pi GPIO pins (0-7 by default)
+   - **Port Expanders**: Support for I2C/SPI expanders (MCP23017, MCP23S17, etc.) to add more channels
+   - **LED Strips**: RGB LED control via Arduino/NodeMCU for advanced lighting effects
+   - **Relay Control**: Can control solid-state or mechanical relays for AC/DC loads
 
-Thanks, and enjoy ;)
+3. **Configuration System**
+   - `config/defaults.cfg`: Base configuration with all available settings
+   - `config/overrides.cfg`: User-specific customizations
+   - Supports per-song configuration overrides
+   - Configurable pin modes: PWM (fading) or on/off switching
 
-Todd Giles ([todd@lightshowpi.org](mailto:todd@lightshowpi.org))
+### Key Components
 
-Installation / Getting Started
-==============================
+#### 1. **Main Application** (`py/synchronized_lights.py`)
+- Orchestrates the entire light show
+- Handles audio playback and analysis
+- Manages light synchronization
+- Supports playlists and individual songs
+- Includes caching system for FFT calculations
 
-Please visit the [Getting Started Page](http://lightshowpi.org/getting-started) for details on getting
-started.  Or for those who want to just jump on in, feel free to run the install.sh script and go 
-for it :-)
+#### 2. **Audio Processing** (`py/fft.py`)
+- Performs real-time frequency analysis
+- Maps frequency ranges to light channels
+- Optimized with GPU acceleration when available
+- Caches FFT results for performance
 
-Directory Structure
-===================
+#### 3. **Hardware Interface** (`py/hardware_controller.py`)
+- Manages GPIO pin states
+- Handles PWM for fading effects
+- Supports multiple hardware configurations
+- Network client/server capabilities
 
-* bin/* - Various bash scripts / tools to aid in playing songs, controlling volume, etc...
-* config/* - Configuration files.
-* crontab/synchronized_lights - Add these via 'sudo crontab -e' to start / stop the lightshow automatically
-* logs/* - Log files will be output here.
-* music/* - Music files go here (includes some samples to get you started).
-* py/* - All the python code.
-* tools/* - Various tools helpful in configuring / using / etc... LightshowPi
+#### 4. **Web Interface** (`web_flask_2023/`)
+- Flask-based web control panel
+- Start/stop light shows
+- Control speakers and system power
+- SMS integration for remote control
 
-Contributors
-============
+#### 5. **Arduino Integration** (`Arduino/`)
+- Controls RGB LED strips
+- Supports multiple LED chipset types (WS2811, APA102, etc.)
+- Receives commands from Raspberry Pi via serial communication
 
-A huge thanks to all those that have contributed to the Lightshow Pi codebase:
+### How It Works
 
-* Todd Giles
-* Chris Usey
-* Ryan Jennings
-* Sean Millar
-* Scott Driscoll
-* Micah Wedemeyer
-* Chase Cromwell
-* Bruce Goheen
-* Paul Dunn
-* Stephen Burning
-* Eric Higdon
-* Tom Enos
-* Brandon Lyon
-* Ken B
-* Paul Barnett
-* Anthony Tod
-* Brent Reinhard
+1. **Setup Phase**:
+   - Audio file is loaded and analyzed using FFT
+   - Frequency ranges are mapped to light channels
+   - FFT data is cached for future playback
 
-Release Notes
-============
+2. **Playback Phase**:
+   - Audio is played through speakers/headphones
+   - Real-time frequency analysis of audio stream
+   - Each frequency band triggers corresponding light channel
+   - Lights fade or switch based on audio amplitude
 
-2021/11/09 :: Version 3.20
--------------------------------
+3. **Control Options**:
+   - **Web Interface**: Browser-based control panel
+   - **Command Line**: Direct script execution
+   - **SMS**: Remote control via text messages
+   - **Scheduling**: Automated shows via cron jobs
 
-* Fixes for Pi4(B), kernel and Debian 11 based OS
-* dir_play support multiple uploads
+### Advanced Features
 
-2019/12/24 :: Version 3.11
--------------------------------
+- **Network Mode**: Client/server architecture for distributed light shows
+- **FM Broadcasting**: Transmit audio to FM radio for wireless speakers
+- **LED Strip Support**: Full RGB color control with custom patterns
+- **Audio Input**: Real-time analysis of live audio sources
+- **Multiple Audio Sources**: Pandora, AirPlay, streaming services
+- **Performance Optimizations**: GPU acceleration, FFT caching
 
-* microweb - Directory Play page under Playlist page
+## Directory Structure
 
-2019/12/20 :: Version 3.10
--------------------------------
+```
+lightshowpi/
+├── py/                    # Python source code
+│   ├── synchronized_lights.py  # Main application
+│   ├── fft.py            # Audio frequency analysis
+│   ├── hardware_controller.py  # GPIO and hardware control
+│   └── ...
+├── config/               # Configuration files
+│   ├── defaults.cfg      # Base configuration
+│   ├── overrides.cfg     # User customizations
+│   └── contrib/          # Hardware-specific configs
+├── bin/                  # Shell scripts and utilities
+├── web_flask_2023/       # Web interface
+├── Arduino/              # Arduino/NodeMCU code for LED strips
+├── music/                # Audio files
+├── tools/                # Configuration and testing tools
+└── logs/                 # System logs
+```
 
-* network - support for server/serverjson send to specific IPs
-* LED - add tools/led_test.py 
-* add Arduino/nodemcu/lspi-gpio-mcp23017-0.ino for nodemcu/MCP23017 combination to allow 16 GPIOs
+## Installation
 
-2019/11/27 :: Version 3.02
--------------------------------
+The system includes comprehensive installation scripts that:
+- Detect the Linux distribution (Raspbian/Arch ARM)
+- Install system dependencies
+- Configure Python packages
+- Set up GPIO permissions
+- Create necessary directories and configurations
 
-* bin/vol to support USB sound devices
-* serverjson fix for hardware_controller.py and sketch v1.5, broadcast bug
-* minor bugs and error handling 
+### Quick Start
 
-2019/11/09 :: Version 3.01
--------------------------------
+1. Clone the repository
+2. Run `sudo ./install.sh`
+3. Configure your hardware in `config/overrides.cfg`
+4. Add music files to `music/` directory
+5. Start the light show with `sudo python py/synchronized_lights.py --file=music/song.mp3`
 
-* Expander chipset bug fixed
-* Custom LED strip color maps, allow LEDs to work in network client mode 
+## Usage Examples
 
-2019/10/05 :: Version 3.0
--------------------------------
+### Play a single song
+```bash
+sudo python py/synchronized_lights.py --file=music/song.mp3
+```
 
-* Upgrade to python 3.x
-* Various bug-fixes and updates to support install on latest Raspbian versions and Pi 4
+### Play from playlist
+```bash
+sudo python py/synchronized_lights.py --playlist=music/.playlist
+```
 
-2018/10/16 :: Version 1.4
--------------------------------
+### Web interface
+Access the web control panel at `http://your-pi-ip:8283`
 
-* Microweb V3 with multiple features
-* More patterns and features for RGB LED Pixels
-* Option to add argument --config=overridesX.cfg to synchronized_lights.py and others
-* Networking serverraw option and NodeMCU sketch for client device 
-* Various bug-fixes and updates to support install on latest Raspbian versions and Pi 3b+
+### SMS control
+Send commands via SMS to control the system remotely
 
-2017/10/27 :: Version 1.3
--------------------------------
+## Hardware Support
 
-* Added initial support for controlling individually controllable RGB LED lights (thanks to Tom Enos, Ken B, and Chris Usey)
-* Addition of the "microweb" UI for controlling your lightshow (thanks to Ken B)
-* Twitter support, tweeting current song playing (thanks to Brent Reinhard and Ken B)
-* Various bug-fixes and updates to support latest kernel versions (thanks to Ken B)
+### GPIO Pins
+- Default: 8 GPIO pins (0-7)
+- Expandable via I2C/SPI port expanders
+- Support for up to 24+ channels
 
-2016/10/16 :: Version 1.2
--------------------------------
+### LED Strips
+- WS2811, WS2812, APA102, LPD8806
+- Full RGB color control
+- Custom patterns and effects
 
-* 3 to 4 times speed improvement by utilizing GPU for fft and other optimizations (thanks to Tom Enos, Colin Guyon, and Ken B)
-* support for streaming audio from pandora, airplay, and other online sources (thanks to Tom Enos and Ken B)
-* support fm broadcast on the pi2 and pi3 (thanks to Ken B)
-* multiple refactors + addition of comments to the code + clean-up (thanks to Tom Enos)
-* add the ability to override configuration options on a per-song basis (thanks to Tom Enos)
-* support pagination for the SMS 'list' command (thanks to Brandon Lyon)
-* support for running lightshow pi on your linux box for debugging (thanks to Micah Wedemeyer)
-* addition of new configuration parameters to tweak many facets of the way lights blink / fade (thanks to Ken B)
-* addition of new configuration parameters to tweak standard deviation bounds used (thanks to Paul Barnett)
-* support a "terminal" mode for better debugging w/out hardware attached (thanks to Anthony Tod)
-* many other misc bug fixes (see Issues list for more details)
+### Audio Sources
+- Local audio files (MP3, WAV, OGG)
+- Streaming services (Pandora, AirPlay)
+- Live audio input
+- FM broadcasting capability
 
-2014/11/27 :: Version 1.1
--------------------------------
+## Configuration
 
-* piFM support (thanks to Stephen Burning)
-* audio-in support (thanks to Paul Dunn)
-* command line play-list generator (thanks to Eric Higdon)
-* enhancements to preshow configuration, including per-channel control  (thanks to Chris Usey)
-* support for expansion cards, including mcp23s17,mcp23017 (thanks to Chris Usey)
-* updated to support RPi B+ (thanks to Chris Usey)
-* clarification on comments and in-code documentation (thanks to Bruce Goheen, Chase Cromwell, and Micah Wedemeyer)
-* other misc bug fixes (see Issues list for more details)
+Key configuration options in `config/overrides.cfg`:
 
-2014/02/16 :: Version 1
--------------------------------
+- `gpio_pins`: Define which GPIO pins to use
+- `pin_modes`: Set PWM or on/off mode for each pin
+- `channels`: Configure frequency ranges for each channel
+- `audio`: Audio device and format settings
+- `hardware`: Port expander and device configurations
 
-* First "stable" release
+## License
+
+All files are free to use under the BSD License. See the LICENSE file for details.
+
+## Community
+
+- [Official Website](http://lightshowpi.org/)
+- [Reddit Community](https://www.reddit.com/r/LightShowPi/)
+- [Facebook Page](https://www.facebook.com/lightshowpi)
+
+## Contributors
+
+A huge thanks to all contributors who have helped build and improve LightShowPi over the years. This project represents the collaborative effort of many developers and enthusiasts in the Raspberry Pi and audio-visual communities.
+
+---
+
+*LightShowPi transforms your Raspberry Pi into a powerful audio-synchronized light show controller, bringing music to life through synchronized lighting effects.*
