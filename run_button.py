@@ -2,24 +2,31 @@ import RPi.GPIO as GPIO
 import subprocess
 import time
 import os
+import psutil  # Requires: pip3 install psutil
 
 # Configuration
 BUTTON_GPIO = 21
-SCRIPT_PATH = os.path.expanduser("~/Documents/lightshowpi/py/synchronized_lights.py")
+SCRIPT_PATH = "/home/pi/Documents/lightshowpi/py/synchronized_lights.py"
 DEBOUNCE_TIME = 300  # milliseconds
 
 # Setup GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUTTON_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-# State variable to track running script
-script_process = None
+def is_script_running(script_name):
+    """Check if script is running anywhere in the system process list."""
+    for proc in psutil.process_iter(['cmdline']):
+        try:
+            if script_name in ' '.join(proc.info['cmdline']):
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return False
 
 def button_pressed(channel):
-    global script_process
-    if script_process is None or script_process.poll() is not None:
+    if not is_script_running("synchronized_lights.py"):
         print("Button pressed, starting lightshow...")
-        script_process = subprocess.Popen(["python3", SCRIPT_PATH])
+        subprocess.Popen(["python3", SCRIPT_PATH])
     else:
         print("Button press ignored, lightshow already running.")
 
